@@ -199,17 +199,42 @@ def submit():
     what should this do when `text` is missing, empty, or enormous? A crash on
     a malformed input is one of the most common real failures there is.
     """
-    payload = request.get_json(silent=True) or {}
+    import detector
+    import scoring
+    import stylometry
 
-    # TODO: delete this and build the route.
+    payload = request.get_json(silent=True)
+    if not isinstance(payload, dict):
+        return jsonify({"error": "Send a JSON object."}), 400
+    text = payload.get("text")
+    creator_id = payload.get("creator_id")
+    if not isinstance(text, str) or not text.strip():
+        return jsonify({"error": "text must be a nonempty string."}), 400
+    if len(text) > config.MAX_TEXT_LENGTH:
+        return jsonify({"error": "text must be at most 10000 characters."}), 400
+    if not isinstance(creator_id, str) or not creator_id.strip():
+        return jsonify({"error": "creator_id must be a nonempty string."}), 400
+
+    try:
+        model_score = detector.model_signal(text)
+    except ValueError as exc:
+        return jsonify({"error": str(exc)}), 400
+    except detector.DetectorUnavailable:
+        return jsonify({"error": "Detector unavailable. Run python detector.py to download the model."}), 503
+    style_score = stylometry.style_signal(text)
+    confidence = scoring.combine_signals(model_score, style_score)
+    guess, label = scoring.score_to_label(confidence)
+    content_id = str(uuid.uuid4())
+    audit.log_decision(
+        content_id=content_id, creator_id=creator_id, guess=guess,
+        model_score=model_score, style_score=style_score,
+        combined_score=confidence, label=label,
+    )
     return jsonify({
-        "error": "not_implemented",
-        "message": "POST /submit isn't built yet — see the TODO in app.py.",
-        "you_sent": {
-            "text_length": len(payload.get("text", "")),
-            "creator_id": payload.get("creator_id"),
-        },
-    }), 501
+        "content_id": content_id, "guess": guess, "confidence": confidence,
+        "label": label, "model_score": model_score,
+        "style_score": style_score, "status": "decided",
+    })
 
 
 @app.post("/appeal")
@@ -232,14 +257,23 @@ def appeal():
     to the person on the other end. It's the only thing standing between a
     wrong accusation and nothing at all.
     """
-    payload = request.get_json(silent=True) or {}
-
-    # TODO: delete this and build the route.
+    payload = request.get_json(silent=True)
+    if not isinstance(payload, dict):
+        return jsonify({"error": "Send a JSON object."}), 400
+    content_id = payload.get("content_id")
+    reasoning = payload.get("reasoning")
+    if not isinstance(content_id, str) or not content_id.strip():
+        return jsonify({"error": "content_id must be a nonempty string."}), 400
+    if not isinstance(reasoning, str) or not reasoning.strip():
+        return jsonify({"error": "reasoning must be a nonempty string."}), 400
+    entries = audit.entries_for(content_id)
+    if not entries:
+        return jsonify({"error": "Content not found."}), 404
+    audit.log_appeal(content_id, entries[0]["creator_id"], reasoning)
     return jsonify({
-        "error": "not_implemented",
-        "message": "POST /appeal isn't built yet — see the TODO in app.py.",
-        "you_sent": payload,
-    }), 501
+        "content_id": content_id, "status": "under_review",
+        "message": "Your appeal has been recorded for review.",
+    })
 
 
 # ── Already works ─────────────────────────────────────────────────────────────
