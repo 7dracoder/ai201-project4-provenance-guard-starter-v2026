@@ -129,6 +129,8 @@ Verification: the environment check passed; curl submissions reached all three l
 
 ## How I Used AI
 
+I directed Codex through the assignment requirements to make the work faster, and I understood what it was doing. I provided the assignment and asked it to keep the implementation basic and limited to what was required. Codex helped with drafting, implementation, and verification as described below.
+
 1. I asked Codex to follow the pasted assignment and keep the project basic. It produced the required submission and appeal routes, the style measurements, and the scoring rule. It filled the starter stubs and checked real model responses and audit entries. No stretch features were added.
 2. When Codex asked me to supply my acceptance criteria, I asked it to draft them in simple language. It produced five measurable targets with reasons, and committed them before collecting results. The criteria were AI-drafted, even though the assignment asks students to write their own. The targets have not been changed to match the sample results.
 
