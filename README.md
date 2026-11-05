@@ -3,7 +3,7 @@
 ## What This Does
 
 1. POST /submit receives JSON containing text and creator_id.
-2. The route checks that both are nonempty strings and text is at most 10,000 characters.
+2. The route checks that both are nonempty strings, text is at most 10,000 characters, and (after the Unit 8 improvement) text contains at least three alphabetic word runs of two or more letters.
 3. detector.model_signal reads the text with a local GPT-2 language model and measures predictability.
 4. stylometry.style_signal measures sentence length spread, word variety, and punctuation density.
 5. scoring.combine_signals combines the two scores into a number from 0 to 1.
@@ -124,7 +124,7 @@ Calibration submissions (examples, not acceptance-criteria results):
 
 The formal human excerpt is from the public-domain Declaration of Independence. The other samples were AI-authored. The deliberately irregular word-list fixture only checks label reachability; its human label is a wrong authorship guess. These examples do not establish accuracy. The model and style signals split on the formal excerpt: 0.6629 versus 0.5000, leaving it unsure.
 
-Verification: the environment check passed; curl submissions reached all three labels; the appeal was recorded as under_review beside its original decision. An isolated check also covered invalid inputs, unknown content IDs, score boundaries, and /ping. The five acceptance targets remain for the next unit, using independently selected samples.
+Verification: the environment check passed; curl submissions reached all three labels; the appeal was recorded as under_review beside its original decision. An isolated check also covered invalid inputs, unknown content IDs, score boundaries, and /ping. The original Unit 7 acceptance targets are tested in the Unit 8 sections below.
 
 
 ## How I Used AI
@@ -133,6 +133,8 @@ I directed Codex through the assignment requirements to make the work faster, an
 
 1. I asked Codex to follow the pasted assignment and keep the project basic. It produced the required submission and appeal routes, the style measurements, and the scoring rule. It filled the starter stubs and checked real model responses and audit entries. No stretch features were added.
 2. When Codex asked me to supply my acceptance criteria, I asked it to draft them in simple language. It produced five measurable targets with reasons, and committed them before collecting results. The criteria were AI-drafted, even though the assignment asks students to write their own. The targets have not been changed to match the sample results.
+
+3. I asked Codex to carry out the pasted testing assignment and keep all work local. It enabled the existing limiter, added rejection logging, ran the supplied attacks and repeated criteria, and helped diagnose the results; after I asked it to choose the writing samples, it selected attributed public-domain human text and generated the AI fixtures. It added and measured the one word-count validation rule and drafted this write-up from the recorded evidence. The original criteria and both scoring signals were preserved.
 
 Setup details: [RUNNING.md](RUNNING.md). Fork: https://github.com/7dracoder/ai201-project4-provenance-guard-starter-v2026
 
@@ -571,3 +573,431 @@ Every broken baseline attack is diagnosed below. These explanations use the obse
 Planned after the baseline: add one input-validation rule in app.py::submit requiring at least three alphabetic word runs of two or more letters before calling either signal. This follows MF03-MF06: the route currently admits material that lacks enough words to support a prose authorship estimate. The existing length/type/creator checks, both signals, weights, thresholds, labels, and all five criteria will stay the same. The rule uses Unicode letters so that Arabic is not rejected merely for its script.
 
 This change may reject legitimate two-word poems or captions. It is meant to stop misleading decisions on obvious non-prose input; it is not expected to repair score separation or evasion. The after run will measure the trade rather than assume it helped.
+
+### Attack Run — After
+
+All 56 attacks ran again after restarting the service to clear in-memory rate counts, using the same 10/minute and 200/day limits. No input files or verdict rules changed.
+
+| ID | Family | Status | Guess | Model | Style | Combined | Verdict |
+|---|---|---|---|---|---|---|---|
+| EV01 | evasion | 200 | unsure | 0.1635 | 0.6004 | 0.2946 | BROKE |
+| EV02 | evasion | 200 | unsure | 0.5943 | 0.3763 | 0.5289 | BROKE |
+| EV03 | evasion | 200 | unsure | 0.6662 | 0.4863 | 0.6122 | BROKE |
+| EV04 | evasion | 200 | unsure | 0.6114 | 0.5905 | 0.6051 | BROKE |
+| EV05 | evasion | 200 | unsure | 0.3212 | 0.4246 | 0.3522 | BROKE |
+| EV06 | evasion | 200 | unsure | 0.5727 | 0.375 | 0.5134 | BROKE |
+| EV07 | evasion | 200 | unsure | 0.5862 | 0.5 | 0.5603 | BROKE |
+| EV08 | evasion | 200 | unsure | 0.2452 | 0.4698 | 0.3126 | BROKE |
+| EV09 | evasion | 200 | unsure | 0.7042 | 0.4832 | 0.6379 | BROKE |
+| EV10 | evasion | 200 | ai | 0.9792 | 0.7435 | 0.9085 | HELD |
+| FP01 | false_positive | 200 | unsure | 0.6175 | 0.5475 | 0.5965 | HELD |
+| FP02 | false_positive | 200 | unsure | 0.7387 | 0.6271 | 0.7052 | HELD |
+| FP03 | false_positive | 200 | unsure | 0.8051 | 0.5938 | 0.7417 | HELD |
+| FP04 | false_positive | 200 | unsure | 0.8329 | 0.5404 | 0.7451 | HELD |
+| FP05 | false_positive | 200 | unsure | 0.8005 | 0.6361 | 0.7512 | HELD |
+| FP06 | false_positive | 200 | unsure | 0.8814 | 0.5161 | 0.7718 | HELD |
+| FP07 | false_positive | 200 | unsure | 0.8816 | 0.5143 | 0.7714 | HELD |
+| FP08 | false_positive | 200 | unsure | 0.3223 | 0.5 | 0.3756 | HELD |
+| PI01 | prompt_injection | 200 | unsure | 0.4625 | 0.4159 | 0.4485 | HELD |
+| PI02 | prompt_injection | 200 | unsure | 0.2044 | 0.3607 | 0.2513 | HELD |
+| PI03 | prompt_injection | 200 | unsure | 0.5943 | 0.5207 | 0.5722 | HELD |
+| PI04 | prompt_injection | 200 | unsure | 0.4998 | 0.3741 | 0.4621 | HELD |
+| PI05 | prompt_injection | 200 | unsure | 0.6401 | 0.2077 | 0.5104 | HELD |
+| PI06 | prompt_injection | 200 | unsure | 0.5583 | 0.5537 | 0.5569 | HELD |
+| MF01 | malformed | 400 | - | - | - | - | HELD |
+| MF02 | malformed | 400 | - | - | - | - | HELD |
+| MF03 | malformed | 400 | - | - | - | - | HELD |
+| MF04 | malformed | 400 | - | - | - | - | HELD |
+| MF05 | malformed | 400 | - | - | - | - | HELD |
+| MF06 | malformed | 400 | - | - | - | - | HELD |
+| MF07 | malformed | 200 | unsure | 0.9064 | 0.5 | 0.7845 | HELD |
+| MF08 | malformed | 400 | - | - | - | - | HELD |
+| RQ01 | malformed | 400 | - | - | - | - | HELD |
+| RQ02 | malformed | 400 | - | - | - | - | HELD |
+| RQ03 | malformed | 400 | - | - | - | - | HELD |
+| RQ04 | malformed | 400 | - | - | - | - | HELD |
+| RQ05 | malformed | 400 | - | - | - | - | HELD |
+| RQ06 | malformed | 400 | - | - | - | - | HELD |
+| RQ07 | malformed | 400 | - | - | - | - | HELD |
+| RQ08 | malformed | 400 | - | - | - | - | HELD |
+| RQ09 | malformed | 400 | - | - | - | - | HELD |
+| RQ10 | malformed | 400 | - | - | - | - | HELD |
+| RQ11 | malformed | 400 | - | - | - | - | HELD |
+| RQ12 | malformed | 400 | - | - | - | - | HELD |
+| FL01_01 | flood_same_creator | 200 | human | 0.0287 | 0.5 | 0.1701 | HELD |
+| FL01_02 | flood_same_creator | 200 | human | 0.0287 | 0.5 | 0.1701 | HELD |
+| FL01_03 | flood_same_creator | 200 | human | 0.0287 | 0.5 | 0.1701 | HELD |
+| FL01_04 | flood_same_creator | 200 | human | 0.0287 | 0.5 | 0.1701 | HELD |
+| FL01_05 | flood_same_creator | 200 | human | 0.0287 | 0.5 | 0.1701 | HELD |
+| FL01_06 | flood_same_creator | 200 | human | 0.0287 | 0.5 | 0.1701 | HELD |
+| FL01_07 | flood_same_creator | 200 | human | 0.0287 | 0.5 | 0.1701 | HELD |
+| FL01_08 | flood_same_creator | 200 | human | 0.0287 | 0.5 | 0.1701 | HELD |
+| FL01_09 | flood_same_creator | 200 | human | 0.0287 | 0.5 | 0.1701 | HELD |
+| FL01_10 | flood_same_creator | 200 | human | 0.0287 | 0.5 | 0.1701 | HELD |
+| FL01_11 | flood_same_creator | 429 | - | - | - | - | HELD |
+| FL01_12 | flood_same_creator | 429 | - | - | - | - | HELD |
+
+### Before and after, side by side
+
+| ID | Before status / guess / score | Before verdict | After status / guess / score | After verdict |
+|---|---|---|---|---|
+| EV01 | 200 / unsure / 0.2946 | BROKE | 200 / unsure / 0.2946 | BROKE |
+| EV02 | 200 / unsure / 0.5289 | BROKE | 200 / unsure / 0.5289 | BROKE |
+| EV03 | 200 / unsure / 0.6122 | BROKE | 200 / unsure / 0.6122 | BROKE |
+| EV04 | 200 / unsure / 0.6051 | BROKE | 200 / unsure / 0.6051 | BROKE |
+| EV05 | 200 / unsure / 0.3522 | BROKE | 200 / unsure / 0.3522 | BROKE |
+| EV06 | 200 / unsure / 0.5134 | BROKE | 200 / unsure / 0.5134 | BROKE |
+| EV07 | 200 / unsure / 0.5603 | BROKE | 200 / unsure / 0.5603 | BROKE |
+| EV08 | 200 / unsure / 0.3126 | BROKE | 200 / unsure / 0.3126 | BROKE |
+| EV09 | 200 / unsure / 0.6379 | BROKE | 200 / unsure / 0.6379 | BROKE |
+| EV10 | 200 / ai / 0.9085 | HELD | 200 / ai / 0.9085 | HELD |
+| FP01 | 200 / unsure / 0.5965 | HELD | 200 / unsure / 0.5965 | HELD |
+| FP02 | 200 / unsure / 0.7052 | HELD | 200 / unsure / 0.7052 | HELD |
+| FP03 | 200 / unsure / 0.7417 | HELD | 200 / unsure / 0.7417 | HELD |
+| FP04 | 200 / unsure / 0.7451 | HELD | 200 / unsure / 0.7451 | HELD |
+| FP05 | 200 / unsure / 0.7512 | HELD | 200 / unsure / 0.7512 | HELD |
+| FP06 | 200 / unsure / 0.7718 | HELD | 200 / unsure / 0.7718 | HELD |
+| FP07 | 200 / unsure / 0.7714 | HELD | 200 / unsure / 0.7714 | HELD |
+| FP08 | 200 / unsure / 0.3756 | HELD | 200 / unsure / 0.3756 | HELD |
+| PI01 | 200 / unsure / 0.4485 | HELD | 200 / unsure / 0.4485 | HELD |
+| PI02 | 200 / unsure / 0.2513 | HELD | 200 / unsure / 0.2513 | HELD |
+| PI03 | 200 / unsure / 0.5722 | HELD | 200 / unsure / 0.5722 | HELD |
+| PI04 | 200 / unsure / 0.4621 | HELD | 200 / unsure / 0.4621 | HELD |
+| PI05 | 200 / unsure / 0.5104 | HELD | 200 / unsure / 0.5104 | HELD |
+| PI06 | 200 / unsure / 0.5569 | HELD | 200 / unsure / 0.5569 | HELD |
+| MF01 | 400 / - / - | HELD | 400 / - / - | HELD |
+| MF02 | 400 / - / - | HELD | 400 / - / - | HELD |
+| MF03 | 200 / human / 0.15 | BROKE | 400 / - / - | HELD |
+| MF04 | 200 / human / 0.1578 | BROKE | 400 / - / - | HELD |
+| MF05 | 200 / ai / 0.8483 | BROKE | 400 / - / - | HELD |
+| MF06 | 200 / ai / 0.8478 | BROKE | 400 / - / - | HELD |
+| MF07 | 200 / unsure / 0.7845 | HELD | 200 / unsure / 0.7845 | HELD |
+| MF08 | 400 / - / - | HELD | 400 / - / - | HELD |
+| RQ01 | 400 / - / - | HELD | 400 / - / - | HELD |
+| RQ02 | 400 / - / - | HELD | 400 / - / - | HELD |
+| RQ03 | 400 / - / - | HELD | 400 / - / - | HELD |
+| RQ04 | 400 / - / - | HELD | 400 / - / - | HELD |
+| RQ05 | 400 / - / - | HELD | 400 / - / - | HELD |
+| RQ06 | 400 / - / - | HELD | 400 / - / - | HELD |
+| RQ07 | 400 / - / - | HELD | 400 / - / - | HELD |
+| RQ08 | 400 / - / - | HELD | 400 / - / - | HELD |
+| RQ09 | 400 / - / - | HELD | 400 / - / - | HELD |
+| RQ10 | 400 / - / - | HELD | 400 / - / - | HELD |
+| RQ11 | 400 / - / - | HELD | 400 / - / - | HELD |
+| RQ12 | 400 / - / - | HELD | 400 / - / - | HELD |
+| FL01_01 | 200 / human / 0.1701 | HELD | 200 / human / 0.1701 | HELD |
+| FL01_02 | 200 / human / 0.1701 | HELD | 200 / human / 0.1701 | HELD |
+| FL01_03 | 200 / human / 0.1701 | HELD | 200 / human / 0.1701 | HELD |
+| FL01_04 | 200 / human / 0.1701 | HELD | 200 / human / 0.1701 | HELD |
+| FL01_05 | 200 / human / 0.1701 | HELD | 200 / human / 0.1701 | HELD |
+| FL01_06 | 200 / human / 0.1701 | HELD | 200 / human / 0.1701 | HELD |
+| FL01_07 | 200 / human / 0.1701 | HELD | 200 / human / 0.1701 | HELD |
+| FL01_08 | 200 / human / 0.1701 | HELD | 200 / human / 0.1701 | HELD |
+| FL01_09 | 200 / human / 0.1701 | HELD | 200 / human / 0.1701 | HELD |
+| FL01_10 | 200 / human / 0.1701 | HELD | 200 / human / 0.1701 | HELD |
+| FL01_11 | 429 / - / - | HELD | 429 / - / - | HELD |
+| FL01_12 | 429 / - / - | HELD | 429 / - / - | HELD |
+
+| Measure | Before | After |
+|---|---|---|
+| HELD | 43/56 | 47/56 |
+| BROKE | 13/56 | 9/56 |
+| Crashes / 5xx | 0 | 0 |
+| High-confidence AI accusations on staff human writing | 0/8 | 0/8 |
+| MF03-MF06 rejected as invalid | 0/4 | 4/4 |
+
+The one validation rule helped: MF03-MF06 now return JSON 400 and rejection log entries, without calling the model or assigning a provenance label. The 52 other attack outcomes stayed the same, including unchanged scores and labels for every accepted input. Evasion and the score-spread limitation remain; accepting fewer short inputs is the cost of this improvement.
+
+### Criteria — After
+
+Same targets, same fixtures, three new real trials per criterion.
+
+| Criterion | Target | Run 1 | Run 2 | Run 3 | Verdict |
+|---|---|---|---|---|---|
+| 1. human false positives | at most 1 AI label in 10 human samples | 0/10 AI | 0/10 AI | 0/10 AI | MET |
+| 2. AI minus human mean score | AI mean minus human mean >= 0.20 (10 each) | delta 0.0475 | delta 0.0475 | delta 0.0475 | MISSED |
+| 3. label coverage | 3 labels from 12 submissions; all scores in [0, 1] | 3/3; in range=True | 3/3; in range=True | 3/3; in range=True | MET |
+| 4. appeal path | 5/5 recorded under_review; exact reasoning; original retained | 5/5 | 5/5 | 5/5 | MET |
+| 5. bad input | 6/6 JSON 400 responses; zero new decisions | 6/6; 0 decisions | 6/6; 0 decisions | 6/6; 0 decisions | MET |
+
+| Criterion | Before verdict | After verdict | Change |
+|---|---|---|---|
+| 1. human false positives | MET | MET | None |
+| 2. AI minus human mean score | MISSED | MISSED | None |
+| 3. label coverage | MET | MET | None |
+| 4. appeal path | MET | MET | None |
+| 5. bad input | MET | MET | None |
+
+The after verdicts use the same reasoning as the baseline. Criterion 2 remains MISSED because the input rule does not change valid texts or their scores; every trial still has difference 0.04747, below 0.20. Criteria 1, 3, 4, and 5 still meet their numeric targets in all three trials. Criteria 1 and 2 retain the published-corpus limitation.
+
+Actual first-trial excerpts from `run_eval.py::run_trial` follow (one result per criterion; full outputs are saved in [run_2026-11-04_194746_after.json](results/run_2026-11-04_194746_after.json)):
+
+Criterion 1:
+
+```json
+{
+  "trial": 1,
+  "metrics": {
+    "flagged_ai": 0,
+    "samples": 10
+  },
+  "verdict": "MET",
+  "results": [
+    {
+      "status": 200,
+      "response": {
+        "confidence": 0.5496,
+        "content_id": "e9502b38-9cc1-451b-8fc8-40dd07b8b3a6",
+        "guess": "unsure",
+        "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+        "model_score": 0.6398,
+        "status": "decided",
+        "style_score": 0.339
+      },
+      "sent": {
+        "creator_id": "eval_after_c1_t1_1",
+        "text_preview": "There was nothing so _very_ remarkable in that; nor did Alice think it so _very_ much out ",
+        "text_length": 739
+      }
+    }
+  ]
+}
+```
+
+Criterion 2:
+
+```json
+{
+  "trial": 1,
+  "metrics": {
+    "human_mean": 0.55863,
+    "ai_mean": 0.6061,
+    "difference": 0.04747000000000001,
+    "samples_per_group": 10
+  },
+  "verdict": "MISSED",
+  "results": [
+    {
+      "status": 200,
+      "response": {
+        "confidence": 0.5496,
+        "content_id": "10c4e34d-4584-4503-9739-6229ccc282a9",
+        "guess": "unsure",
+        "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+        "model_score": 0.6398,
+        "status": "decided",
+        "style_score": 0.339
+      },
+      "sent": {
+        "creator_id": "eval_after_c2_t1_1",
+        "text_preview": "There was nothing so _very_ remarkable in that; nor did Alice think it so _very_ much out ",
+        "text_length": 739
+      }
+    }
+  ]
+}
+```
+
+Criterion 3:
+
+```json
+{
+  "trial": 1,
+  "metrics": {
+    "labels": [
+      "ai",
+      "human",
+      "unsure"
+    ],
+    "samples": 12,
+    "all_scores_in_range": true
+  },
+  "verdict": "MET",
+  "results": [
+    {
+      "status": 200,
+      "response": {
+        "confidence": 0.661,
+        "content_id": "39e9299b-5e49-41b0-8be8-bb272372f397",
+        "guess": "unsure",
+        "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+        "model_score": 0.6877,
+        "status": "decided",
+        "style_score": 0.5986
+      },
+      "sent": {
+        "creator_id": "eval_after_c3_t1_1",
+        "text_preview": "The implementation of a reliable system requires careful planning and consistent evaluatio",
+        "text_length": 458
+      }
+    }
+  ]
+}
+```
+
+Criterion 4:
+
+```json
+{
+  "trial": 1,
+  "metrics": {
+    "recorded_correctly": 5,
+    "appeals": 5
+  },
+  "verdict": "MET",
+  "results": [
+    {
+      "status": 200,
+      "response": {
+        "confidence": 0.661,
+        "content_id": "0aa7f3fd-3cd9-4150-a111-8934704bd3bf",
+        "guess": "unsure",
+        "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+        "model_score": 0.6877,
+        "status": "decided",
+        "style_score": 0.5986
+      },
+      "sent": {
+        "creator_id": "eval_after_c4_t1_1",
+        "text_preview": "The implementation of a reliable system requires careful planning and consistent evaluatio",
+        "text_length": 458
+      },
+      "reasoning": "I challenge decision 1 in trial 1. Please review my explanation.",
+      "appeal": {
+        "status": 200,
+        "response": {
+          "content_id": "0aa7f3fd-3cd9-4150-a111-8934704bd3bf",
+          "message": "Your appeal has been recorded for review.",
+          "status": "under_review"
+        }
+      },
+      "original_log_entry": {
+        "combined_score": 0.661,
+        "content_id": "0aa7f3fd-3cd9-4150-a111-8934704bd3bf",
+        "creator_id": "eval_after_c4_t1_1",
+        "guess": "unsure",
+        "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+        "model_score": 0.6877,
+        "status": "decided",
+        "style_score": 0.5986,
+        "timestamp": "2026-11-05T00:47:41+00:00"
+      },
+      "appeal_log_entry": {
+        "content_id": "0aa7f3fd-3cd9-4150-a111-8934704bd3bf",
+        "creator_id": "eval_after_c4_t1_1",
+        "event": "appeal",
+        "reasoning": "I challenge decision 1 in trial 1. Please review my explanation.",
+        "status": "under_review",
+        "timestamp": "2026-11-05T00:47:41+00:00"
+      },
+      "passed": true
+    }
+  ]
+}
+```
+
+Criterion 5:
+
+```json
+{
+  "trial": 1,
+  "metrics": {
+    "json_400_responses": 6,
+    "invalid_inputs": 6,
+    "new_decisions": 0
+  },
+  "verdict": "MET",
+  "results": [
+    {
+      "status": 400,
+      "response": {
+        "error": "text must be a nonempty string."
+      },
+      "sent": {
+        "creator_id": "eval_after_c5_t1_1",
+        "text_preview": "(missing)",
+        "text_length": null
+      }
+    }
+  ]
+}
+```
+
+Actual after-run rejection events for the four repaired cases:
+
+```json
+[
+  {
+    "timestamp": "2026-11-05T00:46:42+00:00",
+    "creator_id": "attacker_MF03",
+    "event": "rejected",
+    "status": "rejected",
+    "reason": "text must contain at least three words of two or more letters.",
+    "http_status": 400
+  },
+  {
+    "timestamp": "2026-11-05T00:46:42+00:00",
+    "creator_id": "attacker_MF04",
+    "event": "rejected",
+    "status": "rejected",
+    "reason": "text must contain at least three words of two or more letters.",
+    "http_status": 400
+  },
+  {
+    "timestamp": "2026-11-05T00:46:42+00:00",
+    "creator_id": "attacker_MF05",
+    "event": "rejected",
+    "status": "rejected",
+    "reason": "text must contain at least three words of two or more letters.",
+    "http_status": 400
+  },
+  {
+    "timestamp": "2026-11-05T00:46:42+00:00",
+    "creator_id": "attacker_MF06",
+    "event": "rejected",
+    "status": "rejected",
+    "reason": "text must contain at least three words of two or more letters.",
+    "http_status": 400
+  }
+]
+```
+
+## What's Still Broken
+
+Nine evasion attacks remain BROKE under the rule that avoiding an AI label counts as evasion. They receive unsure, not a human certification. The pipeline diagnoses above still apply after the fix; valid inputs are processed exactly as before.
+
+| Remaining failure | What I would examine next |
+|---|---|
+| EV01 | Measure typo sensitivity with paired clean/edited inputs before evaluating a signal less dependent on individual word likelihood. |
+| EV02 | Test whether short sentence insertions dominate the length-spread feature and compare more robust text-shape measurements. |
+| EV03 | Evaluate mixed authorship by separating quoted spans from surrounding prose, keeping uncertainty when the spans disagree. |
+| EV04 | Test rare-word sensitivity across human and AI writing before changing the model or score calibration. |
+| EV05 | Use real edited-AI/human examples to determine what text alone can support; preserve the appeal path when authorship cannot be established. |
+| EV06 | Test sentence-length features on deliberately uneven human and AI samples before replacing or reweighting them. |
+| EV07 | Examine the neutral style fallback with punctuation-padded, single-sentence text; keep unsure when the evidence is thin. |
+| EV08 | Measure reliability by input length instead of treating a short model score as reliable authorship evidence. |
+| EV09 | Measure scoring across multiple text windows so a human opening cannot hide later AI text from the model; account for the extra latency. |
+| Criterion 2 | Evaluate a broader independently labeled corpus, including my own writing, and a more discriminating signal. Neither thresholds nor the current weighted average can create the missing human/AI separation. |
+
+I stopped after the one documented validation improvement so that its effect could be measured without mixing in changes to signals, weights, or labels. The repeats are stable, but a ten-paragraph corpus from one book is narrow, the AI samples come from one generator, and the deliberately shaped label fixtures are not accuracy evidence. The assignment's own-writing test still needs ten samples I actually wrote; this run does not substitute published text and claim it is mine.
+
+The new rule can reject legitimate short poems, captions, or writing in scripts without space-separated words, while still accepting arbitrary junk containing three qualifying words. The caller identifier is also self-reported, so rotating it bypasses the cap, and an in-memory restart resets counts. These limitations are documented rather than patched alongside the single improvement.
+
+For a real writing site, I would prefer more unsure labels and a reliable human review path over accusing a writer on weak evidence. The site and its reviewers would bear the extra review work and some AI writing would pass through, while writers would face fewer unsupported accusations.
+
+Reproduce in PowerShell with the virtual environment active:
+
+```powershell
+$env:HF_HOME = "$PWD\.cache\huggingface"
+python app.py
+```
+
+Then in a second terminal:
+
+```powershell
+python run_attacks.py --flood 15
+python run_attacks.py --set attack_set/attack_set --label after
+python run_eval.py --label after
+```
+
+The committed baseline evidence records the service before the validation change. For a comparison rerun, restart the service between phases so the in-memory limiter starts with the same empty counts; leave all other settings and fixtures fixed. Do not rerun a report with the same label in the same minute, because the starter attack harness uses minute-resolution filenames.

@@ -25,6 +25,7 @@ Routes:
 """
 
 import uuid
+import re
 
 from flask import Flask, jsonify, request
 
@@ -175,6 +176,10 @@ def submit():
         return reject("text must be at most 10000 characters.")
     if not isinstance(creator_id, str) or not creator_id.strip():
         return reject("creator_id must be a nonempty string.")
+
+    # Unit 8's single improvement: do not assign authorship to non-prose junk.
+    if len(re.findall(r"[^\W\d_]{2,}", text)) < 3:
+        return reject("text must contain at least three words of two or more letters.")
 
     try:
         model_score = detector.model_signal(text)

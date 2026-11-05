@@ -1,0 +1,3258 @@
+{
+  "produced_by": "run_eval.py::run_trial",
+  "recorded_at": "2026-11-05T00:47:46.233168+00:00",
+  "criteria_sha256": "b7eb5661be1a7dc6d319c5b30c1149a9183238b0e710c827c9df81f8b45c50da",
+  "fixtures_sha256": "9b369a2a6cebdc378d6c022d8188cd8ebb6e4652aa5c764057bc4f6dbd2d6d28",
+  "human_sample_limitation": "Fixed before the Unit 8 baseline. Human samples are the first ten 60-180 word paragraphs starting at the opening of chapter 1. These are published human writing, not the student's own writing. AI samples were authored by Codex for this test. No examples were selected based on Unit 8 scores.",
+  "rows": [
+    {
+      "criterion": 1,
+      "name": "human false positives",
+      "kind": "false_positives",
+      "target": "at most 1 AI label in 10 human samples",
+      "trials": [
+        {
+          "trial": 1,
+          "metrics": {
+            "flagged_ai": 0,
+            "samples": 10
+          },
+          "verdict": "MET",
+          "results": [
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.5496,
+                "content_id": "e9502b38-9cc1-451b-8fc8-40dd07b8b3a6",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6398,
+                "status": "decided",
+                "style_score": 0.339
+              },
+              "sent": {
+                "creator_id": "eval_after_c1_t1_1",
+                "text_preview": "There was nothing so _very_ remarkable in that; nor did Alice think it so _very_ much out ",
+                "text_length": 739
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6854,
+                "content_id": "30646bba-f4d3-4dc8-bd64-c1eeef5d3832",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.7011,
+                "status": "decided",
+                "style_score": 0.6489
+              },
+              "sent": {
+                "creator_id": "eval_after_c1_t1_2",
+                "text_preview": "Either the well was very deep, or she fell very slowly, for she had plenty of time as she ",
+                "text_length": 715
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.5299,
+                "content_id": "1b7be88e-edd1-4ef5-b75b-f928f2028e3c",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6212,
+                "status": "decided",
+                "style_score": 0.317
+              },
+              "sent": {
+                "creator_id": "eval_after_c1_t1_3",
+                "text_preview": "Down, down, down. Would the fall _never_ come to an end? “I wonder how many miles I’ve fal",
+                "text_length": 706
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.41,
+                "content_id": "b3a8fc43-6eb4-4608-912e-1535027fb0ba",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.4015,
+                "status": "decided",
+                "style_score": 0.4297
+              },
+              "sent": {
+                "creator_id": "eval_after_c1_t1_4",
+                "text_preview": "Presently she began again. “I wonder if I shall fall right _through_ the earth! How funny ",
+                "text_length": 684
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.5715,
+                "content_id": "d2791945-874f-45a4-af32-9045021d55a1",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.5781,
+                "status": "decided",
+                "style_score": 0.556
+              },
+              "sent": {
+                "creator_id": "eval_after_c1_t1_5",
+                "text_preview": "Alice was not a bit hurt, and she jumped up on to her feet in a moment: she looked up, but",
+                "text_length": 578
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6545,
+                "content_id": "ff328c5a-45e2-4581-919b-aa54df58fabc",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6895,
+                "status": "decided",
+                "style_score": 0.573
+              },
+              "sent": {
+                "creator_id": "eval_after_c1_t1_6",
+                "text_preview": "Suddenly she came upon a little three-legged table, all made of solid glass; there was not",
+                "text_length": 558
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6206,
+                "content_id": "72dd0147-93b3-4aa3-9bc6-b6e1718dfe66",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6677,
+                "status": "decided",
+                "style_score": 0.5106
+              },
+              "sent": {
+                "creator_id": "eval_after_c1_t1_7",
+                "text_preview": "Alice opened the door and found that it led into a small passage, not much larger than a r",
+                "text_length": 719
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.4756,
+                "content_id": "daaba9ef-d79f-4fc8-a429-0f166b974d13",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.4652,
+                "status": "decided",
+                "style_score": 0.5
+              },
+              "sent": {
+                "creator_id": "eval_after_c1_t1_8",
+                "text_preview": "There seemed to be no use in waiting by the little door, so she went back to the table, ha",
+                "text_length": 423
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.4629,
+                "content_id": "99078a24-fb61-4699-a8cc-af3447be1bde",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.5196,
+                "status": "decided",
+                "style_score": 0.3305
+              },
+              "sent": {
+                "creator_id": "eval_after_c1_t1_9",
+                "text_preview": "It was all very well to say “Drink me,” but the wise little Alice was not going to do _tha",
+                "text_length": 701
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6263,
+                "content_id": "6afbc9e0-cd62-4019-b3fd-3c98733b2721",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6091,
+                "status": "decided",
+                "style_score": 0.6663
+              },
+              "sent": {
+                "creator_id": "eval_after_c1_t1_10",
+                "text_preview": "And so it was indeed: she was now only ten inches high, and her face brightened up at the ",
+                "text_length": 600
+              }
+            }
+          ]
+        },
+        {
+          "trial": 2,
+          "metrics": {
+            "flagged_ai": 0,
+            "samples": 10
+          },
+          "verdict": "MET",
+          "results": [
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.5496,
+                "content_id": "6b2d2650-c877-419b-adae-9494ab1289ab",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6398,
+                "status": "decided",
+                "style_score": 0.339
+              },
+              "sent": {
+                "creator_id": "eval_after_c1_t2_1",
+                "text_preview": "There was nothing so _very_ remarkable in that; nor did Alice think it so _very_ much out ",
+                "text_length": 739
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6854,
+                "content_id": "d4d0ad89-3fba-472c-a9c6-76d8d6509778",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.7011,
+                "status": "decided",
+                "style_score": 0.6489
+              },
+              "sent": {
+                "creator_id": "eval_after_c1_t2_2",
+                "text_preview": "Either the well was very deep, or she fell very slowly, for she had plenty of time as she ",
+                "text_length": 715
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.5299,
+                "content_id": "4d98825e-a0e2-4105-b98d-3c67fde76a56",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6212,
+                "status": "decided",
+                "style_score": 0.317
+              },
+              "sent": {
+                "creator_id": "eval_after_c1_t2_3",
+                "text_preview": "Down, down, down. Would the fall _never_ come to an end? “I wonder how many miles I’ve fal",
+                "text_length": 706
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.41,
+                "content_id": "969c7ae7-01af-4db0-b42f-71f6fbc308f5",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.4015,
+                "status": "decided",
+                "style_score": 0.4297
+              },
+              "sent": {
+                "creator_id": "eval_after_c1_t2_4",
+                "text_preview": "Presently she began again. “I wonder if I shall fall right _through_ the earth! How funny ",
+                "text_length": 684
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.5715,
+                "content_id": "f1650cc7-57cd-433b-8825-923b25544594",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.5781,
+                "status": "decided",
+                "style_score": 0.556
+              },
+              "sent": {
+                "creator_id": "eval_after_c1_t2_5",
+                "text_preview": "Alice was not a bit hurt, and she jumped up on to her feet in a moment: she looked up, but",
+                "text_length": 578
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6545,
+                "content_id": "91523bdd-9f19-47d1-b4e5-11c3af6a90ce",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6895,
+                "status": "decided",
+                "style_score": 0.573
+              },
+              "sent": {
+                "creator_id": "eval_after_c1_t2_6",
+                "text_preview": "Suddenly she came upon a little three-legged table, all made of solid glass; there was not",
+                "text_length": 558
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6206,
+                "content_id": "cef92bf9-7ba0-4a0f-9322-ba819a60065d",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6677,
+                "status": "decided",
+                "style_score": 0.5106
+              },
+              "sent": {
+                "creator_id": "eval_after_c1_t2_7",
+                "text_preview": "Alice opened the door and found that it led into a small passage, not much larger than a r",
+                "text_length": 719
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.4756,
+                "content_id": "0138e0b8-3165-47ec-8cff-cb40d15f1f3e",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.4652,
+                "status": "decided",
+                "style_score": 0.5
+              },
+              "sent": {
+                "creator_id": "eval_after_c1_t2_8",
+                "text_preview": "There seemed to be no use in waiting by the little door, so she went back to the table, ha",
+                "text_length": 423
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.4629,
+                "content_id": "b9504bb1-cee5-4d9b-ba1f-86dc7453866d",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.5196,
+                "status": "decided",
+                "style_score": 0.3305
+              },
+              "sent": {
+                "creator_id": "eval_after_c1_t2_9",
+                "text_preview": "It was all very well to say “Drink me,” but the wise little Alice was not going to do _tha",
+                "text_length": 701
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6263,
+                "content_id": "9483bcef-21e3-4637-8db8-0b938b7433a6",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6091,
+                "status": "decided",
+                "style_score": 0.6663
+              },
+              "sent": {
+                "creator_id": "eval_after_c1_t2_10",
+                "text_preview": "And so it was indeed: she was now only ten inches high, and her face brightened up at the ",
+                "text_length": 600
+              }
+            }
+          ]
+        },
+        {
+          "trial": 3,
+          "metrics": {
+            "flagged_ai": 0,
+            "samples": 10
+          },
+          "verdict": "MET",
+          "results": [
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.5496,
+                "content_id": "99453794-342e-4f4d-9893-bf9e6954141e",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6398,
+                "status": "decided",
+                "style_score": 0.339
+              },
+              "sent": {
+                "creator_id": "eval_after_c1_t3_1",
+                "text_preview": "There was nothing so _very_ remarkable in that; nor did Alice think it so _very_ much out ",
+                "text_length": 739
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6854,
+                "content_id": "cb802733-06f6-4047-b3ae-ac855278a455",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.7011,
+                "status": "decided",
+                "style_score": 0.6489
+              },
+              "sent": {
+                "creator_id": "eval_after_c1_t3_2",
+                "text_preview": "Either the well was very deep, or she fell very slowly, for she had plenty of time as she ",
+                "text_length": 715
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.5299,
+                "content_id": "87b3202f-970b-40a0-901b-b0e7e271fbd1",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6212,
+                "status": "decided",
+                "style_score": 0.317
+              },
+              "sent": {
+                "creator_id": "eval_after_c1_t3_3",
+                "text_preview": "Down, down, down. Would the fall _never_ come to an end? “I wonder how many miles I’ve fal",
+                "text_length": 706
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.41,
+                "content_id": "3d515f44-5889-4f58-87bb-3e3762c42820",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.4015,
+                "status": "decided",
+                "style_score": 0.4297
+              },
+              "sent": {
+                "creator_id": "eval_after_c1_t3_4",
+                "text_preview": "Presently she began again. “I wonder if I shall fall right _through_ the earth! How funny ",
+                "text_length": 684
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.5715,
+                "content_id": "e02c5c9a-681d-4f20-a1ab-749484777be3",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.5781,
+                "status": "decided",
+                "style_score": 0.556
+              },
+              "sent": {
+                "creator_id": "eval_after_c1_t3_5",
+                "text_preview": "Alice was not a bit hurt, and she jumped up on to her feet in a moment: she looked up, but",
+                "text_length": 578
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6545,
+                "content_id": "7af32e75-8853-4c8f-9a4c-3948ffdd2bcd",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6895,
+                "status": "decided",
+                "style_score": 0.573
+              },
+              "sent": {
+                "creator_id": "eval_after_c1_t3_6",
+                "text_preview": "Suddenly she came upon a little three-legged table, all made of solid glass; there was not",
+                "text_length": 558
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6206,
+                "content_id": "296eec19-c52d-4e48-9866-9edf90ef4ca2",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6677,
+                "status": "decided",
+                "style_score": 0.5106
+              },
+              "sent": {
+                "creator_id": "eval_after_c1_t3_7",
+                "text_preview": "Alice opened the door and found that it led into a small passage, not much larger than a r",
+                "text_length": 719
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.4756,
+                "content_id": "9dfc650f-3153-48f9-9e54-6b281d99ea34",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.4652,
+                "status": "decided",
+                "style_score": 0.5
+              },
+              "sent": {
+                "creator_id": "eval_after_c1_t3_8",
+                "text_preview": "There seemed to be no use in waiting by the little door, so she went back to the table, ha",
+                "text_length": 423
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.4629,
+                "content_id": "056dc6d4-6cbb-4384-9ebc-5beaf3722337",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.5196,
+                "status": "decided",
+                "style_score": 0.3305
+              },
+              "sent": {
+                "creator_id": "eval_after_c1_t3_9",
+                "text_preview": "It was all very well to say “Drink me,” but the wise little Alice was not going to do _tha",
+                "text_length": 701
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6263,
+                "content_id": "b3c7890b-bb49-499f-912f-4e7789a7bffc",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6091,
+                "status": "decided",
+                "style_score": 0.6663
+              },
+              "sent": {
+                "creator_id": "eval_after_c1_t3_10",
+                "text_preview": "And so it was indeed: she was now only ten inches high, and her face brightened up at the ",
+                "text_length": 600
+              }
+            }
+          ]
+        }
+      ],
+      "verdict": "MET"
+    },
+    {
+      "criterion": 2,
+      "name": "AI minus human mean score",
+      "kind": "score_spread",
+      "target": "AI mean minus human mean >= 0.20 (10 each)",
+      "trials": [
+        {
+          "trial": 1,
+          "metrics": {
+            "human_mean": 0.55863,
+            "ai_mean": 0.6061,
+            "difference": 0.04747000000000001,
+            "samples_per_group": 10
+          },
+          "verdict": "MISSED",
+          "results": [
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.5496,
+                "content_id": "10c4e34d-4584-4503-9739-6229ccc282a9",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6398,
+                "status": "decided",
+                "style_score": 0.339
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t1_1",
+                "text_preview": "There was nothing so _very_ remarkable in that; nor did Alice think it so _very_ much out ",
+                "text_length": 739
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6854,
+                "content_id": "fe0184f4-20a8-41e6-a19c-2e3d61046e3c",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.7011,
+                "status": "decided",
+                "style_score": 0.6489
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t1_2",
+                "text_preview": "Either the well was very deep, or she fell very slowly, for she had plenty of time as she ",
+                "text_length": 715
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.5299,
+                "content_id": "82cc6a85-6cff-4d33-9866-906ed342cd01",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6212,
+                "status": "decided",
+                "style_score": 0.317
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t1_3",
+                "text_preview": "Down, down, down. Would the fall _never_ come to an end? “I wonder how many miles I’ve fal",
+                "text_length": 706
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.41,
+                "content_id": "2f9e42eb-69a5-45cc-b4b4-0f1c8d816082",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.4015,
+                "status": "decided",
+                "style_score": 0.4297
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t1_4",
+                "text_preview": "Presently she began again. “I wonder if I shall fall right _through_ the earth! How funny ",
+                "text_length": 684
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.5715,
+                "content_id": "5fb30fcd-fb3f-4498-9af8-ebbc9cc0a72b",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.5781,
+                "status": "decided",
+                "style_score": 0.556
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t1_5",
+                "text_preview": "Alice was not a bit hurt, and she jumped up on to her feet in a moment: she looked up, but",
+                "text_length": 578
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6545,
+                "content_id": "56d4e693-1748-4663-931f-c313ffa01898",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6895,
+                "status": "decided",
+                "style_score": 0.573
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t1_6",
+                "text_preview": "Suddenly she came upon a little three-legged table, all made of solid glass; there was not",
+                "text_length": 558
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6206,
+                "content_id": "9d32a595-e698-45c5-b5c1-71a0c1717947",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6677,
+                "status": "decided",
+                "style_score": 0.5106
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t1_7",
+                "text_preview": "Alice opened the door and found that it led into a small passage, not much larger than a r",
+                "text_length": 719
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.4756,
+                "content_id": "ecb9a96d-0fdb-4d73-9740-7955e4a765a1",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.4652,
+                "status": "decided",
+                "style_score": 0.5
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t1_8",
+                "text_preview": "There seemed to be no use in waiting by the little door, so she went back to the table, ha",
+                "text_length": 423
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.4629,
+                "content_id": "3cda37e8-eace-4b2b-a3f6-ab24a5df9cae",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.5196,
+                "status": "decided",
+                "style_score": 0.3305
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t1_9",
+                "text_preview": "It was all very well to say “Drink me,” but the wise little Alice was not going to do _tha",
+                "text_length": 701
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6263,
+                "content_id": "bb2808e6-93d5-46f1-aaa7-4d9433183661",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6091,
+                "status": "decided",
+                "style_score": 0.6663
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t1_10",
+                "text_preview": "And so it was indeed: she was now only ten inches high, and her face brightened up at the ",
+                "text_length": 600
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.661,
+                "content_id": "a2cd47df-3ad3-4c24-9a66-84470a7dcbfe",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6877,
+                "status": "decided",
+                "style_score": 0.5986
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t1_11",
+                "text_preview": "The implementation of a reliable system requires careful planning and consistent evaluatio",
+                "text_length": 458
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6631,
+                "content_id": "408a0267-2b92-4b30-a0c6-89f1145c6841",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.7069,
+                "status": "decided",
+                "style_score": 0.5608
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t1_12",
+                "text_preview": "Effective communication is important for successful teamwork. Team members should share in",
+                "text_length": 495
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.5775,
+                "content_id": "6dfdead5-1964-4478-8d31-92741fdad89a",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.5904,
+                "status": "decided",
+                "style_score": 0.5475
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t1_13",
+                "text_preview": "A balanced approach to time management can improve productivity. Individuals should identi",
+                "text_length": 437
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6516,
+                "content_id": "755019e4-747b-4e3c-ae24-b11e24f5911d",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6825,
+                "status": "decided",
+                "style_score": 0.5794
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t1_14",
+                "text_preview": "Sustainable transportation can provide several benefits for urban communities. Public tran",
+                "text_length": 440
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6686,
+                "content_id": "e71d0b52-4e22-407d-a0ab-a550caff36cd",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.7325,
+                "status": "decided",
+                "style_score": 0.5196
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t1_15",
+                "text_preview": "Learning a new skill requires practice and patience. Beginners should start with basic con",
+                "text_length": 437
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.5468,
+                "content_id": "18da27de-2d03-4ecf-9dd5-22562588c580",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.5496,
+                "status": "decided",
+                "style_score": 0.5402
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t1_16",
+                "text_preview": "A well organized library provides valuable resources for its community. Clear signs help v",
+                "text_length": 440
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.5159,
+                "content_id": "60252069-d0d8-417d-a20c-e58188bad769",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.4928,
+                "status": "decided",
+                "style_score": 0.5698
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t1_17",
+                "text_preview": "Data quality is essential for meaningful analysis. Organizations should collect informatio",
+                "text_length": 426
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6069,
+                "content_id": "ecdb0ff6-7089-4828-b26e-215806731bd2",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6294,
+                "status": "decided",
+                "style_score": 0.5545
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t1_18",
+                "text_preview": "Planning a community event involves several important steps. Organizers should define the ",
+                "text_length": 440
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.5717,
+                "content_id": "fbdcdb38-8743-40e3-997e-914fa134a6ff",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.5857,
+                "status": "decided",
+                "style_score": 0.5392
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t1_19",
+                "text_preview": "Good documentation helps people understand how a project works. Instructions should explai",
+                "text_length": 437
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.5979,
+                "content_id": "80c39050-9e43-4d1e-abcc-b9d099115320",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.5799,
+                "status": "decided",
+                "style_score": 0.64
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t1_20",
+                "text_preview": "A reliable customer service process should provide clear and timely responses. Staff shoul",
+                "text_length": 438
+              }
+            }
+          ]
+        },
+        {
+          "trial": 2,
+          "metrics": {
+            "human_mean": 0.55863,
+            "ai_mean": 0.6061,
+            "difference": 0.04747000000000001,
+            "samples_per_group": 10
+          },
+          "verdict": "MISSED",
+          "results": [
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.5496,
+                "content_id": "04b204aa-592b-4e7d-aa7d-97da30b98006",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6398,
+                "status": "decided",
+                "style_score": 0.339
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t2_1",
+                "text_preview": "There was nothing so _very_ remarkable in that; nor did Alice think it so _very_ much out ",
+                "text_length": 739
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6854,
+                "content_id": "29db24f8-d63d-4b78-83ab-bc577d3bf51f",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.7011,
+                "status": "decided",
+                "style_score": 0.6489
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t2_2",
+                "text_preview": "Either the well was very deep, or she fell very slowly, for she had plenty of time as she ",
+                "text_length": 715
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.5299,
+                "content_id": "f472d8be-3152-4959-b172-78d55808f143",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6212,
+                "status": "decided",
+                "style_score": 0.317
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t2_3",
+                "text_preview": "Down, down, down. Would the fall _never_ come to an end? “I wonder how many miles I’ve fal",
+                "text_length": 706
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.41,
+                "content_id": "148a67a9-5c71-401d-b479-433775fd0e83",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.4015,
+                "status": "decided",
+                "style_score": 0.4297
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t2_4",
+                "text_preview": "Presently she began again. “I wonder if I shall fall right _through_ the earth! How funny ",
+                "text_length": 684
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.5715,
+                "content_id": "3bdbebd2-6a89-45f0-90b3-0bae58179204",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.5781,
+                "status": "decided",
+                "style_score": 0.556
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t2_5",
+                "text_preview": "Alice was not a bit hurt, and she jumped up on to her feet in a moment: she looked up, but",
+                "text_length": 578
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6545,
+                "content_id": "87429ca2-7c2c-4a2d-8bc1-9b7d420484b1",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6895,
+                "status": "decided",
+                "style_score": 0.573
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t2_6",
+                "text_preview": "Suddenly she came upon a little three-legged table, all made of solid glass; there was not",
+                "text_length": 558
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6206,
+                "content_id": "e4ca2841-fb07-4b2f-a26c-69221ad02bf9",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6677,
+                "status": "decided",
+                "style_score": 0.5106
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t2_7",
+                "text_preview": "Alice opened the door and found that it led into a small passage, not much larger than a r",
+                "text_length": 719
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.4756,
+                "content_id": "c2871af6-7312-4d73-bff0-f761101e8f54",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.4652,
+                "status": "decided",
+                "style_score": 0.5
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t2_8",
+                "text_preview": "There seemed to be no use in waiting by the little door, so she went back to the table, ha",
+                "text_length": 423
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.4629,
+                "content_id": "af2abde3-a8af-4f24-9c22-e2797913b757",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.5196,
+                "status": "decided",
+                "style_score": 0.3305
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t2_9",
+                "text_preview": "It was all very well to say “Drink me,” but the wise little Alice was not going to do _tha",
+                "text_length": 701
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6263,
+                "content_id": "413266ca-2135-4c17-a2cc-15019ecd63a8",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6091,
+                "status": "decided",
+                "style_score": 0.6663
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t2_10",
+                "text_preview": "And so it was indeed: she was now only ten inches high, and her face brightened up at the ",
+                "text_length": 600
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.661,
+                "content_id": "817b2349-0322-4e91-bd53-9cc68132b661",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6877,
+                "status": "decided",
+                "style_score": 0.5986
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t2_11",
+                "text_preview": "The implementation of a reliable system requires careful planning and consistent evaluatio",
+                "text_length": 458
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6631,
+                "content_id": "c4269ab0-1094-4a1b-89a4-918708521eeb",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.7069,
+                "status": "decided",
+                "style_score": 0.5608
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t2_12",
+                "text_preview": "Effective communication is important for successful teamwork. Team members should share in",
+                "text_length": 495
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.5775,
+                "content_id": "9effd691-c512-456e-99ad-3558efe9de54",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.5904,
+                "status": "decided",
+                "style_score": 0.5475
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t2_13",
+                "text_preview": "A balanced approach to time management can improve productivity. Individuals should identi",
+                "text_length": 437
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6516,
+                "content_id": "d2893a22-61b1-4ee0-b2bc-1740779c5eba",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6825,
+                "status": "decided",
+                "style_score": 0.5794
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t2_14",
+                "text_preview": "Sustainable transportation can provide several benefits for urban communities. Public tran",
+                "text_length": 440
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6686,
+                "content_id": "7a07ae00-57f3-4f20-8cf9-6e95d178b031",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.7325,
+                "status": "decided",
+                "style_score": 0.5196
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t2_15",
+                "text_preview": "Learning a new skill requires practice and patience. Beginners should start with basic con",
+                "text_length": 437
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.5468,
+                "content_id": "8a35ca45-cacb-41a3-a666-f91061e5e1ed",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.5496,
+                "status": "decided",
+                "style_score": 0.5402
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t2_16",
+                "text_preview": "A well organized library provides valuable resources for its community. Clear signs help v",
+                "text_length": 440
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.5159,
+                "content_id": "a125f9b5-71fd-4b72-a6bf-2a12289b6e35",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.4928,
+                "status": "decided",
+                "style_score": 0.5698
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t2_17",
+                "text_preview": "Data quality is essential for meaningful analysis. Organizations should collect informatio",
+                "text_length": 426
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6069,
+                "content_id": "8de9031a-03d7-4e5d-bc80-1caa1c8741ff",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6294,
+                "status": "decided",
+                "style_score": 0.5545
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t2_18",
+                "text_preview": "Planning a community event involves several important steps. Organizers should define the ",
+                "text_length": 440
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.5717,
+                "content_id": "8dc9883d-4424-4aa5-acf6-2a9989cc2de9",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.5857,
+                "status": "decided",
+                "style_score": 0.5392
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t2_19",
+                "text_preview": "Good documentation helps people understand how a project works. Instructions should explai",
+                "text_length": 437
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.5979,
+                "content_id": "80fc0346-9109-4f25-9120-f311cf9e89ac",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.5799,
+                "status": "decided",
+                "style_score": 0.64
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t2_20",
+                "text_preview": "A reliable customer service process should provide clear and timely responses. Staff shoul",
+                "text_length": 438
+              }
+            }
+          ]
+        },
+        {
+          "trial": 3,
+          "metrics": {
+            "human_mean": 0.55863,
+            "ai_mean": 0.6061,
+            "difference": 0.04747000000000001,
+            "samples_per_group": 10
+          },
+          "verdict": "MISSED",
+          "results": [
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.5496,
+                "content_id": "3140547d-708a-4222-8157-44d9808f24ee",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6398,
+                "status": "decided",
+                "style_score": 0.339
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t3_1",
+                "text_preview": "There was nothing so _very_ remarkable in that; nor did Alice think it so _very_ much out ",
+                "text_length": 739
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6854,
+                "content_id": "bf90a7a6-06f9-49e7-a86e-c7224069fd15",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.7011,
+                "status": "decided",
+                "style_score": 0.6489
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t3_2",
+                "text_preview": "Either the well was very deep, or she fell very slowly, for she had plenty of time as she ",
+                "text_length": 715
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.5299,
+                "content_id": "2ef47b30-0211-46a8-8eff-0ea9a9dcf809",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6212,
+                "status": "decided",
+                "style_score": 0.317
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t3_3",
+                "text_preview": "Down, down, down. Would the fall _never_ come to an end? “I wonder how many miles I’ve fal",
+                "text_length": 706
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.41,
+                "content_id": "1fff029b-67b7-4b9a-b1bf-a60d2567c209",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.4015,
+                "status": "decided",
+                "style_score": 0.4297
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t3_4",
+                "text_preview": "Presently she began again. “I wonder if I shall fall right _through_ the earth! How funny ",
+                "text_length": 684
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.5715,
+                "content_id": "3dcd7b8a-d47f-4b4d-bcfa-74696b6c6f72",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.5781,
+                "status": "decided",
+                "style_score": 0.556
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t3_5",
+                "text_preview": "Alice was not a bit hurt, and she jumped up on to her feet in a moment: she looked up, but",
+                "text_length": 578
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6545,
+                "content_id": "11634d9d-4e0d-401c-a5bd-c6e005b29f1c",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6895,
+                "status": "decided",
+                "style_score": 0.573
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t3_6",
+                "text_preview": "Suddenly she came upon a little three-legged table, all made of solid glass; there was not",
+                "text_length": 558
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6206,
+                "content_id": "c87570b6-eea3-48aa-a54e-428d1a565560",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6677,
+                "status": "decided",
+                "style_score": 0.5106
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t3_7",
+                "text_preview": "Alice opened the door and found that it led into a small passage, not much larger than a r",
+                "text_length": 719
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.4756,
+                "content_id": "a247459b-83f6-4bed-aae3-108d90cbb316",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.4652,
+                "status": "decided",
+                "style_score": 0.5
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t3_8",
+                "text_preview": "There seemed to be no use in waiting by the little door, so she went back to the table, ha",
+                "text_length": 423
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.4629,
+                "content_id": "7f462175-3d0b-4f39-9813-81c30ef5566e",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.5196,
+                "status": "decided",
+                "style_score": 0.3305
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t3_9",
+                "text_preview": "It was all very well to say “Drink me,” but the wise little Alice was not going to do _tha",
+                "text_length": 701
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6263,
+                "content_id": "67934ce1-1a82-4d31-9956-32e29ca85ad5",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6091,
+                "status": "decided",
+                "style_score": 0.6663
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t3_10",
+                "text_preview": "And so it was indeed: she was now only ten inches high, and her face brightened up at the ",
+                "text_length": 600
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.661,
+                "content_id": "1954a1f3-3a5a-42f7-bce7-1d0fcad59d5d",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6877,
+                "status": "decided",
+                "style_score": 0.5986
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t3_11",
+                "text_preview": "The implementation of a reliable system requires careful planning and consistent evaluatio",
+                "text_length": 458
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6631,
+                "content_id": "db6979e3-4ecf-4207-9442-66877b5e1490",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.7069,
+                "status": "decided",
+                "style_score": 0.5608
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t3_12",
+                "text_preview": "Effective communication is important for successful teamwork. Team members should share in",
+                "text_length": 495
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.5775,
+                "content_id": "75e1fd98-b445-453c-b7eb-50055c02d379",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.5904,
+                "status": "decided",
+                "style_score": 0.5475
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t3_13",
+                "text_preview": "A balanced approach to time management can improve productivity. Individuals should identi",
+                "text_length": 437
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6516,
+                "content_id": "9d653158-6b6e-4103-b2bb-01413eb309fd",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6825,
+                "status": "decided",
+                "style_score": 0.5794
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t3_14",
+                "text_preview": "Sustainable transportation can provide several benefits for urban communities. Public tran",
+                "text_length": 440
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6686,
+                "content_id": "aaa1a187-597f-4f6e-bea5-1db7a423da36",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.7325,
+                "status": "decided",
+                "style_score": 0.5196
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t3_15",
+                "text_preview": "Learning a new skill requires practice and patience. Beginners should start with basic con",
+                "text_length": 437
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.5468,
+                "content_id": "ad2c78d4-0ccb-4206-8d1c-f1b176428c91",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.5496,
+                "status": "decided",
+                "style_score": 0.5402
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t3_16",
+                "text_preview": "A well organized library provides valuable resources for its community. Clear signs help v",
+                "text_length": 440
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.5159,
+                "content_id": "d80b33a6-5f62-483b-ae38-8326be41461d",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.4928,
+                "status": "decided",
+                "style_score": 0.5698
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t3_17",
+                "text_preview": "Data quality is essential for meaningful analysis. Organizations should collect informatio",
+                "text_length": 426
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6069,
+                "content_id": "1e57d644-eb77-4d1d-8b91-c726cefe83d3",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6294,
+                "status": "decided",
+                "style_score": 0.5545
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t3_18",
+                "text_preview": "Planning a community event involves several important steps. Organizers should define the ",
+                "text_length": 440
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.5717,
+                "content_id": "fe77d66d-2514-4211-a383-bbc7a91376d3",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.5857,
+                "status": "decided",
+                "style_score": 0.5392
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t3_19",
+                "text_preview": "Good documentation helps people understand how a project works. Instructions should explai",
+                "text_length": 437
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.5979,
+                "content_id": "7baaf787-8b51-4f87-839e-700940983349",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.5799,
+                "status": "decided",
+                "style_score": 0.64
+              },
+              "sent": {
+                "creator_id": "eval_after_c2_t3_20",
+                "text_preview": "A reliable customer service process should provide clear and timely responses. Staff shoul",
+                "text_length": 438
+              }
+            }
+          ]
+        }
+      ],
+      "verdict": "MISSED"
+    },
+    {
+      "criterion": 3,
+      "name": "label coverage",
+      "kind": "coverage",
+      "target": "3 labels from 12 submissions; all scores in [0, 1]",
+      "trials": [
+        {
+          "trial": 1,
+          "metrics": {
+            "labels": [
+              "ai",
+              "human",
+              "unsure"
+            ],
+            "samples": 12,
+            "all_scores_in_range": true
+          },
+          "verdict": "MET",
+          "results": [
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.661,
+                "content_id": "39e9299b-5e49-41b0-8be8-bb272372f397",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6877,
+                "status": "decided",
+                "style_score": 0.5986
+              },
+              "sent": {
+                "creator_id": "eval_after_c3_t1_1",
+                "text_preview": "The implementation of a reliable system requires careful planning and consistent evaluatio",
+                "text_length": 458
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6631,
+                "content_id": "5b85f3de-16ce-4bdb-9fbb-39588924e4db",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.7069,
+                "status": "decided",
+                "style_score": 0.5608
+              },
+              "sent": {
+                "creator_id": "eval_after_c3_t1_2",
+                "text_preview": "Effective communication is important for successful teamwork. Team members should share in",
+                "text_length": 495
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.5775,
+                "content_id": "6001125b-c7a3-4d99-921f-3b0572b9c56a",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.5904,
+                "status": "decided",
+                "style_score": 0.5475
+              },
+              "sent": {
+                "creator_id": "eval_after_c3_t1_3",
+                "text_preview": "A balanced approach to time management can improve productivity. Individuals should identi",
+                "text_length": 437
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6516,
+                "content_id": "76be5e1f-ce2d-4d2f-be67-c9a365c9cb3d",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6825,
+                "status": "decided",
+                "style_score": 0.5794
+              },
+              "sent": {
+                "creator_id": "eval_after_c3_t1_4",
+                "text_preview": "Sustainable transportation can provide several benefits for urban communities. Public tran",
+                "text_length": 440
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6686,
+                "content_id": "bb81418d-4921-4037-8062-e761cb95417b",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.7325,
+                "status": "decided",
+                "style_score": 0.5196
+              },
+              "sent": {
+                "creator_id": "eval_after_c3_t1_5",
+                "text_preview": "Learning a new skill requires practice and patience. Beginners should start with basic con",
+                "text_length": 437
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.5496,
+                "content_id": "e14e58e0-7f18-4e58-8f03-e8a89b31649c",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6398,
+                "status": "decided",
+                "style_score": 0.339
+              },
+              "sent": {
+                "creator_id": "eval_after_c3_t1_6",
+                "text_preview": "There was nothing so _very_ remarkable in that; nor did Alice think it so _very_ much out ",
+                "text_length": 739
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6854,
+                "content_id": "f15a5cc1-febe-4dd5-a5ff-39738f2bb6c3",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.7011,
+                "status": "decided",
+                "style_score": 0.6489
+              },
+              "sent": {
+                "creator_id": "eval_after_c3_t1_7",
+                "text_preview": "Either the well was very deep, or she fell very slowly, for she had plenty of time as she ",
+                "text_length": 715
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.5299,
+                "content_id": "41b7c1f8-f37d-472f-98de-69047ea35ec0",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6212,
+                "status": "decided",
+                "style_score": 0.317
+              },
+              "sent": {
+                "creator_id": "eval_after_c3_t1_8",
+                "text_preview": "Down, down, down. Would the fall _never_ come to an end? “I wonder how many miles I’ve fal",
+                "text_length": 706
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.41,
+                "content_id": "1b737e7b-871a-47d2-9376-1c7d042b24f1",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.4015,
+                "status": "decided",
+                "style_score": 0.4297
+              },
+              "sent": {
+                "creator_id": "eval_after_c3_t1_9",
+                "text_preview": "Presently she began again. “I wonder if I shall fall right _through_ the earth! How funny ",
+                "text_length": 684
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.5715,
+                "content_id": "1c337ff6-61cd-4edd-8968-3fdd06ab217e",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.5781,
+                "status": "decided",
+                "style_score": 0.556
+              },
+              "sent": {
+                "creator_id": "eval_after_c3_t1_10",
+                "text_preview": "Alice was not a bit hurt, and she jumped up on to her feet in a moment: she looked up, but",
+                "text_length": 578
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.1075,
+                "content_id": "29549970-3e79-4709-ab90-87d8e0464f5d",
+                "guess": "human",
+                "label": "We think this was written by a person, but this estimate is not proof of authorship.",
+                "model_score": 0.1315,
+                "status": "decided",
+                "style_score": 0.0514
+              },
+              "sent": {
+                "creator_id": "eval_after_c3_t1_11",
+                "text_preview": "Quincunx, borborygmus, zyzzyva; susurrus, syzygy, tmesis, chthonic, psithurism, xylophagou",
+                "text_length": 201
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.9477,
+                "content_id": "3fcd02a0-12f8-4a2a-b905-b04e91576f88",
+                "guess": "ai",
+                "label": "We think this may have been generated by AI, but we could be wrong. You can request a review if you wrote it yourself.",
+                "model_score": 0.9945,
+                "status": "decided",
+                "style_score": 0.8385
+              },
+              "sent": {
+                "creator_id": "eval_after_c3_t1_12",
+                "text_preview": "The system works well. The system provides good results. The system handles the data. The ",
+                "text_length": 1086
+              }
+            }
+          ]
+        },
+        {
+          "trial": 2,
+          "metrics": {
+            "labels": [
+              "ai",
+              "human",
+              "unsure"
+            ],
+            "samples": 12,
+            "all_scores_in_range": true
+          },
+          "verdict": "MET",
+          "results": [
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.661,
+                "content_id": "48758c06-053d-421e-acaf-952097e752df",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6877,
+                "status": "decided",
+                "style_score": 0.5986
+              },
+              "sent": {
+                "creator_id": "eval_after_c3_t2_1",
+                "text_preview": "The implementation of a reliable system requires careful planning and consistent evaluatio",
+                "text_length": 458
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6631,
+                "content_id": "fb241aff-86be-49ae-96b6-f5a3adb64afb",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.7069,
+                "status": "decided",
+                "style_score": 0.5608
+              },
+              "sent": {
+                "creator_id": "eval_after_c3_t2_2",
+                "text_preview": "Effective communication is important for successful teamwork. Team members should share in",
+                "text_length": 495
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.5775,
+                "content_id": "221838a5-c92a-4444-84d9-b858ee141066",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.5904,
+                "status": "decided",
+                "style_score": 0.5475
+              },
+              "sent": {
+                "creator_id": "eval_after_c3_t2_3",
+                "text_preview": "A balanced approach to time management can improve productivity. Individuals should identi",
+                "text_length": 437
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6516,
+                "content_id": "0897bf88-8983-4d41-8812-6af7c74763e7",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6825,
+                "status": "decided",
+                "style_score": 0.5794
+              },
+              "sent": {
+                "creator_id": "eval_after_c3_t2_4",
+                "text_preview": "Sustainable transportation can provide several benefits for urban communities. Public tran",
+                "text_length": 440
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6686,
+                "content_id": "aac20f09-6da6-435f-b92c-286cb5c59894",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.7325,
+                "status": "decided",
+                "style_score": 0.5196
+              },
+              "sent": {
+                "creator_id": "eval_after_c3_t2_5",
+                "text_preview": "Learning a new skill requires practice and patience. Beginners should start with basic con",
+                "text_length": 437
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.5496,
+                "content_id": "ede7b213-9176-46dc-98f4-1c5107d9944e",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6398,
+                "status": "decided",
+                "style_score": 0.339
+              },
+              "sent": {
+                "creator_id": "eval_after_c3_t2_6",
+                "text_preview": "There was nothing so _very_ remarkable in that; nor did Alice think it so _very_ much out ",
+                "text_length": 739
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6854,
+                "content_id": "b8506ba1-4404-4ef5-974a-1aa26538f7f9",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.7011,
+                "status": "decided",
+                "style_score": 0.6489
+              },
+              "sent": {
+                "creator_id": "eval_after_c3_t2_7",
+                "text_preview": "Either the well was very deep, or she fell very slowly, for she had plenty of time as she ",
+                "text_length": 715
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.5299,
+                "content_id": "eeab7884-9436-46a0-9a05-9c19c740f7ff",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6212,
+                "status": "decided",
+                "style_score": 0.317
+              },
+              "sent": {
+                "creator_id": "eval_after_c3_t2_8",
+                "text_preview": "Down, down, down. Would the fall _never_ come to an end? “I wonder how many miles I’ve fal",
+                "text_length": 706
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.41,
+                "content_id": "32d0a353-9130-43d3-9478-a661a51addc3",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.4015,
+                "status": "decided",
+                "style_score": 0.4297
+              },
+              "sent": {
+                "creator_id": "eval_after_c3_t2_9",
+                "text_preview": "Presently she began again. “I wonder if I shall fall right _through_ the earth! How funny ",
+                "text_length": 684
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.5715,
+                "content_id": "9048989a-665f-4871-95af-6ff9e2aa353f",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.5781,
+                "status": "decided",
+                "style_score": 0.556
+              },
+              "sent": {
+                "creator_id": "eval_after_c3_t2_10",
+                "text_preview": "Alice was not a bit hurt, and she jumped up on to her feet in a moment: she looked up, but",
+                "text_length": 578
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.1075,
+                "content_id": "8323bfdd-93b8-4d71-9f2b-c60c05540858",
+                "guess": "human",
+                "label": "We think this was written by a person, but this estimate is not proof of authorship.",
+                "model_score": 0.1315,
+                "status": "decided",
+                "style_score": 0.0514
+              },
+              "sent": {
+                "creator_id": "eval_after_c3_t2_11",
+                "text_preview": "Quincunx, borborygmus, zyzzyva; susurrus, syzygy, tmesis, chthonic, psithurism, xylophagou",
+                "text_length": 201
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.9477,
+                "content_id": "2bb1aa74-c792-44e5-95a8-3df09ddbd54c",
+                "guess": "ai",
+                "label": "We think this may have been generated by AI, but we could be wrong. You can request a review if you wrote it yourself.",
+                "model_score": 0.9945,
+                "status": "decided",
+                "style_score": 0.8385
+              },
+              "sent": {
+                "creator_id": "eval_after_c3_t2_12",
+                "text_preview": "The system works well. The system provides good results. The system handles the data. The ",
+                "text_length": 1086
+              }
+            }
+          ]
+        },
+        {
+          "trial": 3,
+          "metrics": {
+            "labels": [
+              "ai",
+              "human",
+              "unsure"
+            ],
+            "samples": 12,
+            "all_scores_in_range": true
+          },
+          "verdict": "MET",
+          "results": [
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.661,
+                "content_id": "46b008a8-deef-44a7-8653-222da5e76826",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6877,
+                "status": "decided",
+                "style_score": 0.5986
+              },
+              "sent": {
+                "creator_id": "eval_after_c3_t3_1",
+                "text_preview": "The implementation of a reliable system requires careful planning and consistent evaluatio",
+                "text_length": 458
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6631,
+                "content_id": "8d8d0806-ac78-45bd-aaf9-ccc6c6c50ceb",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.7069,
+                "status": "decided",
+                "style_score": 0.5608
+              },
+              "sent": {
+                "creator_id": "eval_after_c3_t3_2",
+                "text_preview": "Effective communication is important for successful teamwork. Team members should share in",
+                "text_length": 495
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.5775,
+                "content_id": "386c22a8-71c9-4e49-a455-9d384dfbe2a0",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.5904,
+                "status": "decided",
+                "style_score": 0.5475
+              },
+              "sent": {
+                "creator_id": "eval_after_c3_t3_3",
+                "text_preview": "A balanced approach to time management can improve productivity. Individuals should identi",
+                "text_length": 437
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6516,
+                "content_id": "4dd4dc74-dbd8-4f8d-ad3c-0a8db8d708d2",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6825,
+                "status": "decided",
+                "style_score": 0.5794
+              },
+              "sent": {
+                "creator_id": "eval_after_c3_t3_4",
+                "text_preview": "Sustainable transportation can provide several benefits for urban communities. Public tran",
+                "text_length": 440
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6686,
+                "content_id": "a045ea68-a9a8-4c5d-8ea4-8d34f6be29c8",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.7325,
+                "status": "decided",
+                "style_score": 0.5196
+              },
+              "sent": {
+                "creator_id": "eval_after_c3_t3_5",
+                "text_preview": "Learning a new skill requires practice and patience. Beginners should start with basic con",
+                "text_length": 437
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.5496,
+                "content_id": "8b762139-e8d8-4546-8df1-23028b1cb3af",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6398,
+                "status": "decided",
+                "style_score": 0.339
+              },
+              "sent": {
+                "creator_id": "eval_after_c3_t3_6",
+                "text_preview": "There was nothing so _very_ remarkable in that; nor did Alice think it so _very_ much out ",
+                "text_length": 739
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6854,
+                "content_id": "c80ffffc-7292-4706-9149-ebdbf264e4cc",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.7011,
+                "status": "decided",
+                "style_score": 0.6489
+              },
+              "sent": {
+                "creator_id": "eval_after_c3_t3_7",
+                "text_preview": "Either the well was very deep, or she fell very slowly, for she had plenty of time as she ",
+                "text_length": 715
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.5299,
+                "content_id": "189a8dee-8661-4451-8324-cb4dfc3548cf",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6212,
+                "status": "decided",
+                "style_score": 0.317
+              },
+              "sent": {
+                "creator_id": "eval_after_c3_t3_8",
+                "text_preview": "Down, down, down. Would the fall _never_ come to an end? “I wonder how many miles I’ve fal",
+                "text_length": 706
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.41,
+                "content_id": "8ca5ebc3-8dc6-4b01-91a6-75c1bfa6d2f2",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.4015,
+                "status": "decided",
+                "style_score": 0.4297
+              },
+              "sent": {
+                "creator_id": "eval_after_c3_t3_9",
+                "text_preview": "Presently she began again. “I wonder if I shall fall right _through_ the earth! How funny ",
+                "text_length": 684
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.5715,
+                "content_id": "f7a6a1af-a5f0-47e2-adf0-8ee003cb6fb9",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.5781,
+                "status": "decided",
+                "style_score": 0.556
+              },
+              "sent": {
+                "creator_id": "eval_after_c3_t3_10",
+                "text_preview": "Alice was not a bit hurt, and she jumped up on to her feet in a moment: she looked up, but",
+                "text_length": 578
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.1075,
+                "content_id": "d3403516-025a-4c54-a0b8-54c1a51b70f5",
+                "guess": "human",
+                "label": "We think this was written by a person, but this estimate is not proof of authorship.",
+                "model_score": 0.1315,
+                "status": "decided",
+                "style_score": 0.0514
+              },
+              "sent": {
+                "creator_id": "eval_after_c3_t3_11",
+                "text_preview": "Quincunx, borborygmus, zyzzyva; susurrus, syzygy, tmesis, chthonic, psithurism, xylophagou",
+                "text_length": 201
+              }
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.9477,
+                "content_id": "db711bd2-c9ad-4dba-9d3a-4d5e5c53b218",
+                "guess": "ai",
+                "label": "We think this may have been generated by AI, but we could be wrong. You can request a review if you wrote it yourself.",
+                "model_score": 0.9945,
+                "status": "decided",
+                "style_score": 0.8385
+              },
+              "sent": {
+                "creator_id": "eval_after_c3_t3_12",
+                "text_preview": "The system works well. The system provides good results. The system handles the data. The ",
+                "text_length": 1086
+              }
+            }
+          ]
+        }
+      ],
+      "verdict": "MET"
+    },
+    {
+      "criterion": 4,
+      "name": "appeal path",
+      "kind": "appeals",
+      "target": "5/5 recorded under_review; exact reasoning; original retained",
+      "trials": [
+        {
+          "trial": 1,
+          "metrics": {
+            "recorded_correctly": 5,
+            "appeals": 5
+          },
+          "verdict": "MET",
+          "results": [
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.661,
+                "content_id": "0aa7f3fd-3cd9-4150-a111-8934704bd3bf",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6877,
+                "status": "decided",
+                "style_score": 0.5986
+              },
+              "sent": {
+                "creator_id": "eval_after_c4_t1_1",
+                "text_preview": "The implementation of a reliable system requires careful planning and consistent evaluatio",
+                "text_length": 458
+              },
+              "reasoning": "I challenge decision 1 in trial 1. Please review my explanation.",
+              "appeal": {
+                "status": 200,
+                "response": {
+                  "content_id": "0aa7f3fd-3cd9-4150-a111-8934704bd3bf",
+                  "message": "Your appeal has been recorded for review.",
+                  "status": "under_review"
+                }
+              },
+              "original_log_entry": {
+                "combined_score": 0.661,
+                "content_id": "0aa7f3fd-3cd9-4150-a111-8934704bd3bf",
+                "creator_id": "eval_after_c4_t1_1",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6877,
+                "status": "decided",
+                "style_score": 0.5986,
+                "timestamp": "2026-11-05T00:47:41+00:00"
+              },
+              "appeal_log_entry": {
+                "content_id": "0aa7f3fd-3cd9-4150-a111-8934704bd3bf",
+                "creator_id": "eval_after_c4_t1_1",
+                "event": "appeal",
+                "reasoning": "I challenge decision 1 in trial 1. Please review my explanation.",
+                "status": "under_review",
+                "timestamp": "2026-11-05T00:47:41+00:00"
+              },
+              "passed": true
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6631,
+                "content_id": "4281c29a-888c-43e9-ae6a-60c880b5806d",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.7069,
+                "status": "decided",
+                "style_score": 0.5608
+              },
+              "sent": {
+                "creator_id": "eval_after_c4_t1_2",
+                "text_preview": "Effective communication is important for successful teamwork. Team members should share in",
+                "text_length": 495
+              },
+              "reasoning": "I challenge decision 2 in trial 1. Please review my explanation.",
+              "appeal": {
+                "status": 200,
+                "response": {
+                  "content_id": "4281c29a-888c-43e9-ae6a-60c880b5806d",
+                  "message": "Your appeal has been recorded for review.",
+                  "status": "under_review"
+                }
+              },
+              "original_log_entry": {
+                "combined_score": 0.6631,
+                "content_id": "4281c29a-888c-43e9-ae6a-60c880b5806d",
+                "creator_id": "eval_after_c4_t1_2",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.7069,
+                "status": "decided",
+                "style_score": 0.5608,
+                "timestamp": "2026-11-05T00:47:41+00:00"
+              },
+              "appeal_log_entry": {
+                "content_id": "4281c29a-888c-43e9-ae6a-60c880b5806d",
+                "creator_id": "eval_after_c4_t1_2",
+                "event": "appeal",
+                "reasoning": "I challenge decision 2 in trial 1. Please review my explanation.",
+                "status": "under_review",
+                "timestamp": "2026-11-05T00:47:41+00:00"
+              },
+              "passed": true
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.5775,
+                "content_id": "983cc756-aa0a-492a-bdf6-21b6894eff9d",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.5904,
+                "status": "decided",
+                "style_score": 0.5475
+              },
+              "sent": {
+                "creator_id": "eval_after_c4_t1_3",
+                "text_preview": "A balanced approach to time management can improve productivity. Individuals should identi",
+                "text_length": 437
+              },
+              "reasoning": "I challenge decision 3 in trial 1. Please review my explanation.",
+              "appeal": {
+                "status": 200,
+                "response": {
+                  "content_id": "983cc756-aa0a-492a-bdf6-21b6894eff9d",
+                  "message": "Your appeal has been recorded for review.",
+                  "status": "under_review"
+                }
+              },
+              "original_log_entry": {
+                "combined_score": 0.5775,
+                "content_id": "983cc756-aa0a-492a-bdf6-21b6894eff9d",
+                "creator_id": "eval_after_c4_t1_3",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.5904,
+                "status": "decided",
+                "style_score": 0.5475,
+                "timestamp": "2026-11-05T00:47:42+00:00"
+              },
+              "appeal_log_entry": {
+                "content_id": "983cc756-aa0a-492a-bdf6-21b6894eff9d",
+                "creator_id": "eval_after_c4_t1_3",
+                "event": "appeal",
+                "reasoning": "I challenge decision 3 in trial 1. Please review my explanation.",
+                "status": "under_review",
+                "timestamp": "2026-11-05T00:47:42+00:00"
+              },
+              "passed": true
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6516,
+                "content_id": "ce2c560e-9952-48b1-abf6-529cf50e2d65",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6825,
+                "status": "decided",
+                "style_score": 0.5794
+              },
+              "sent": {
+                "creator_id": "eval_after_c4_t1_4",
+                "text_preview": "Sustainable transportation can provide several benefits for urban communities. Public tran",
+                "text_length": 440
+              },
+              "reasoning": "I challenge decision 4 in trial 1. Please review my explanation.",
+              "appeal": {
+                "status": 200,
+                "response": {
+                  "content_id": "ce2c560e-9952-48b1-abf6-529cf50e2d65",
+                  "message": "Your appeal has been recorded for review.",
+                  "status": "under_review"
+                }
+              },
+              "original_log_entry": {
+                "combined_score": 0.6516,
+                "content_id": "ce2c560e-9952-48b1-abf6-529cf50e2d65",
+                "creator_id": "eval_after_c4_t1_4",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6825,
+                "status": "decided",
+                "style_score": 0.5794,
+                "timestamp": "2026-11-05T00:47:42+00:00"
+              },
+              "appeal_log_entry": {
+                "content_id": "ce2c560e-9952-48b1-abf6-529cf50e2d65",
+                "creator_id": "eval_after_c4_t1_4",
+                "event": "appeal",
+                "reasoning": "I challenge decision 4 in trial 1. Please review my explanation.",
+                "status": "under_review",
+                "timestamp": "2026-11-05T00:47:42+00:00"
+              },
+              "passed": true
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6686,
+                "content_id": "628ed4f6-0717-4157-b187-8678bea1c2b6",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.7325,
+                "status": "decided",
+                "style_score": 0.5196
+              },
+              "sent": {
+                "creator_id": "eval_after_c4_t1_5",
+                "text_preview": "Learning a new skill requires practice and patience. Beginners should start with basic con",
+                "text_length": 437
+              },
+              "reasoning": "I challenge decision 5 in trial 1. Please review my explanation.",
+              "appeal": {
+                "status": 200,
+                "response": {
+                  "content_id": "628ed4f6-0717-4157-b187-8678bea1c2b6",
+                  "message": "Your appeal has been recorded for review.",
+                  "status": "under_review"
+                }
+              },
+              "original_log_entry": {
+                "combined_score": 0.6686,
+                "content_id": "628ed4f6-0717-4157-b187-8678bea1c2b6",
+                "creator_id": "eval_after_c4_t1_5",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.7325,
+                "status": "decided",
+                "style_score": 0.5196,
+                "timestamp": "2026-11-05T00:47:42+00:00"
+              },
+              "appeal_log_entry": {
+                "content_id": "628ed4f6-0717-4157-b187-8678bea1c2b6",
+                "creator_id": "eval_after_c4_t1_5",
+                "event": "appeal",
+                "reasoning": "I challenge decision 5 in trial 1. Please review my explanation.",
+                "status": "under_review",
+                "timestamp": "2026-11-05T00:47:42+00:00"
+              },
+              "passed": true
+            }
+          ]
+        },
+        {
+          "trial": 2,
+          "metrics": {
+            "recorded_correctly": 5,
+            "appeals": 5
+          },
+          "verdict": "MET",
+          "results": [
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.661,
+                "content_id": "a7f939fe-f7c3-4fda-83ad-5e0ba678fbed",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6877,
+                "status": "decided",
+                "style_score": 0.5986
+              },
+              "sent": {
+                "creator_id": "eval_after_c4_t2_1",
+                "text_preview": "The implementation of a reliable system requires careful planning and consistent evaluatio",
+                "text_length": 458
+              },
+              "reasoning": "I challenge decision 1 in trial 2. Please review my explanation.",
+              "appeal": {
+                "status": 200,
+                "response": {
+                  "content_id": "a7f939fe-f7c3-4fda-83ad-5e0ba678fbed",
+                  "message": "Your appeal has been recorded for review.",
+                  "status": "under_review"
+                }
+              },
+              "original_log_entry": {
+                "combined_score": 0.661,
+                "content_id": "a7f939fe-f7c3-4fda-83ad-5e0ba678fbed",
+                "creator_id": "eval_after_c4_t2_1",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6877,
+                "status": "decided",
+                "style_score": 0.5986,
+                "timestamp": "2026-11-05T00:47:43+00:00"
+              },
+              "appeal_log_entry": {
+                "content_id": "a7f939fe-f7c3-4fda-83ad-5e0ba678fbed",
+                "creator_id": "eval_after_c4_t2_1",
+                "event": "appeal",
+                "reasoning": "I challenge decision 1 in trial 2. Please review my explanation.",
+                "status": "under_review",
+                "timestamp": "2026-11-05T00:47:43+00:00"
+              },
+              "passed": true
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6631,
+                "content_id": "6e11db66-e3c2-415a-a19f-af9409f4a40d",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.7069,
+                "status": "decided",
+                "style_score": 0.5608
+              },
+              "sent": {
+                "creator_id": "eval_after_c4_t2_2",
+                "text_preview": "Effective communication is important for successful teamwork. Team members should share in",
+                "text_length": 495
+              },
+              "reasoning": "I challenge decision 2 in trial 2. Please review my explanation.",
+              "appeal": {
+                "status": 200,
+                "response": {
+                  "content_id": "6e11db66-e3c2-415a-a19f-af9409f4a40d",
+                  "message": "Your appeal has been recorded for review.",
+                  "status": "under_review"
+                }
+              },
+              "original_log_entry": {
+                "combined_score": 0.6631,
+                "content_id": "6e11db66-e3c2-415a-a19f-af9409f4a40d",
+                "creator_id": "eval_after_c4_t2_2",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.7069,
+                "status": "decided",
+                "style_score": 0.5608,
+                "timestamp": "2026-11-05T00:47:43+00:00"
+              },
+              "appeal_log_entry": {
+                "content_id": "6e11db66-e3c2-415a-a19f-af9409f4a40d",
+                "creator_id": "eval_after_c4_t2_2",
+                "event": "appeal",
+                "reasoning": "I challenge decision 2 in trial 2. Please review my explanation.",
+                "status": "under_review",
+                "timestamp": "2026-11-05T00:47:43+00:00"
+              },
+              "passed": true
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.5775,
+                "content_id": "990d7398-708c-4c78-9b7c-5f72564959af",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.5904,
+                "status": "decided",
+                "style_score": 0.5475
+              },
+              "sent": {
+                "creator_id": "eval_after_c4_t2_3",
+                "text_preview": "A balanced approach to time management can improve productivity. Individuals should identi",
+                "text_length": 437
+              },
+              "reasoning": "I challenge decision 3 in trial 2. Please review my explanation.",
+              "appeal": {
+                "status": 200,
+                "response": {
+                  "content_id": "990d7398-708c-4c78-9b7c-5f72564959af",
+                  "message": "Your appeal has been recorded for review.",
+                  "status": "under_review"
+                }
+              },
+              "original_log_entry": {
+                "combined_score": 0.5775,
+                "content_id": "990d7398-708c-4c78-9b7c-5f72564959af",
+                "creator_id": "eval_after_c4_t2_3",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.5904,
+                "status": "decided",
+                "style_score": 0.5475,
+                "timestamp": "2026-11-05T00:47:43+00:00"
+              },
+              "appeal_log_entry": {
+                "content_id": "990d7398-708c-4c78-9b7c-5f72564959af",
+                "creator_id": "eval_after_c4_t2_3",
+                "event": "appeal",
+                "reasoning": "I challenge decision 3 in trial 2. Please review my explanation.",
+                "status": "under_review",
+                "timestamp": "2026-11-05T00:47:43+00:00"
+              },
+              "passed": true
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6516,
+                "content_id": "1b90022e-446b-44e6-82e5-9ac1bf092d54",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6825,
+                "status": "decided",
+                "style_score": 0.5794
+              },
+              "sent": {
+                "creator_id": "eval_after_c4_t2_4",
+                "text_preview": "Sustainable transportation can provide several benefits for urban communities. Public tran",
+                "text_length": 440
+              },
+              "reasoning": "I challenge decision 4 in trial 2. Please review my explanation.",
+              "appeal": {
+                "status": 200,
+                "response": {
+                  "content_id": "1b90022e-446b-44e6-82e5-9ac1bf092d54",
+                  "message": "Your appeal has been recorded for review.",
+                  "status": "under_review"
+                }
+              },
+              "original_log_entry": {
+                "combined_score": 0.6516,
+                "content_id": "1b90022e-446b-44e6-82e5-9ac1bf092d54",
+                "creator_id": "eval_after_c4_t2_4",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6825,
+                "status": "decided",
+                "style_score": 0.5794,
+                "timestamp": "2026-11-05T00:47:44+00:00"
+              },
+              "appeal_log_entry": {
+                "content_id": "1b90022e-446b-44e6-82e5-9ac1bf092d54",
+                "creator_id": "eval_after_c4_t2_4",
+                "event": "appeal",
+                "reasoning": "I challenge decision 4 in trial 2. Please review my explanation.",
+                "status": "under_review",
+                "timestamp": "2026-11-05T00:47:44+00:00"
+              },
+              "passed": true
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6686,
+                "content_id": "0e334004-3a44-439b-8dce-a73011dec6b1",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.7325,
+                "status": "decided",
+                "style_score": 0.5196
+              },
+              "sent": {
+                "creator_id": "eval_after_c4_t2_5",
+                "text_preview": "Learning a new skill requires practice and patience. Beginners should start with basic con",
+                "text_length": 437
+              },
+              "reasoning": "I challenge decision 5 in trial 2. Please review my explanation.",
+              "appeal": {
+                "status": 200,
+                "response": {
+                  "content_id": "0e334004-3a44-439b-8dce-a73011dec6b1",
+                  "message": "Your appeal has been recorded for review.",
+                  "status": "under_review"
+                }
+              },
+              "original_log_entry": {
+                "combined_score": 0.6686,
+                "content_id": "0e334004-3a44-439b-8dce-a73011dec6b1",
+                "creator_id": "eval_after_c4_t2_5",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.7325,
+                "status": "decided",
+                "style_score": 0.5196,
+                "timestamp": "2026-11-05T00:47:44+00:00"
+              },
+              "appeal_log_entry": {
+                "content_id": "0e334004-3a44-439b-8dce-a73011dec6b1",
+                "creator_id": "eval_after_c4_t2_5",
+                "event": "appeal",
+                "reasoning": "I challenge decision 5 in trial 2. Please review my explanation.",
+                "status": "under_review",
+                "timestamp": "2026-11-05T00:47:44+00:00"
+              },
+              "passed": true
+            }
+          ]
+        },
+        {
+          "trial": 3,
+          "metrics": {
+            "recorded_correctly": 5,
+            "appeals": 5
+          },
+          "verdict": "MET",
+          "results": [
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.661,
+                "content_id": "130ff530-9ac1-4a60-a208-7fcde7ff5d7f",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6877,
+                "status": "decided",
+                "style_score": 0.5986
+              },
+              "sent": {
+                "creator_id": "eval_after_c4_t3_1",
+                "text_preview": "The implementation of a reliable system requires careful planning and consistent evaluatio",
+                "text_length": 458
+              },
+              "reasoning": "I challenge decision 1 in trial 3. Please review my explanation.",
+              "appeal": {
+                "status": 200,
+                "response": {
+                  "content_id": "130ff530-9ac1-4a60-a208-7fcde7ff5d7f",
+                  "message": "Your appeal has been recorded for review.",
+                  "status": "under_review"
+                }
+              },
+              "original_log_entry": {
+                "combined_score": 0.661,
+                "content_id": "130ff530-9ac1-4a60-a208-7fcde7ff5d7f",
+                "creator_id": "eval_after_c4_t3_1",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6877,
+                "status": "decided",
+                "style_score": 0.5986,
+                "timestamp": "2026-11-05T00:47:44+00:00"
+              },
+              "appeal_log_entry": {
+                "content_id": "130ff530-9ac1-4a60-a208-7fcde7ff5d7f",
+                "creator_id": "eval_after_c4_t3_1",
+                "event": "appeal",
+                "reasoning": "I challenge decision 1 in trial 3. Please review my explanation.",
+                "status": "under_review",
+                "timestamp": "2026-11-05T00:47:44+00:00"
+              },
+              "passed": true
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6631,
+                "content_id": "4e2470eb-01fa-466a-8b52-b971eba79270",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.7069,
+                "status": "decided",
+                "style_score": 0.5608
+              },
+              "sent": {
+                "creator_id": "eval_after_c4_t3_2",
+                "text_preview": "Effective communication is important for successful teamwork. Team members should share in",
+                "text_length": 495
+              },
+              "reasoning": "I challenge decision 2 in trial 3. Please review my explanation.",
+              "appeal": {
+                "status": 200,
+                "response": {
+                  "content_id": "4e2470eb-01fa-466a-8b52-b971eba79270",
+                  "message": "Your appeal has been recorded for review.",
+                  "status": "under_review"
+                }
+              },
+              "original_log_entry": {
+                "combined_score": 0.6631,
+                "content_id": "4e2470eb-01fa-466a-8b52-b971eba79270",
+                "creator_id": "eval_after_c4_t3_2",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.7069,
+                "status": "decided",
+                "style_score": 0.5608,
+                "timestamp": "2026-11-05T00:47:44+00:00"
+              },
+              "appeal_log_entry": {
+                "content_id": "4e2470eb-01fa-466a-8b52-b971eba79270",
+                "creator_id": "eval_after_c4_t3_2",
+                "event": "appeal",
+                "reasoning": "I challenge decision 2 in trial 3. Please review my explanation.",
+                "status": "under_review",
+                "timestamp": "2026-11-05T00:47:44+00:00"
+              },
+              "passed": true
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.5775,
+                "content_id": "c5d765c1-615f-478e-adea-49eee8b47aae",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.5904,
+                "status": "decided",
+                "style_score": 0.5475
+              },
+              "sent": {
+                "creator_id": "eval_after_c4_t3_3",
+                "text_preview": "A balanced approach to time management can improve productivity. Individuals should identi",
+                "text_length": 437
+              },
+              "reasoning": "I challenge decision 3 in trial 3. Please review my explanation.",
+              "appeal": {
+                "status": 200,
+                "response": {
+                  "content_id": "c5d765c1-615f-478e-adea-49eee8b47aae",
+                  "message": "Your appeal has been recorded for review.",
+                  "status": "under_review"
+                }
+              },
+              "original_log_entry": {
+                "combined_score": 0.5775,
+                "content_id": "c5d765c1-615f-478e-adea-49eee8b47aae",
+                "creator_id": "eval_after_c4_t3_3",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.5904,
+                "status": "decided",
+                "style_score": 0.5475,
+                "timestamp": "2026-11-05T00:47:45+00:00"
+              },
+              "appeal_log_entry": {
+                "content_id": "c5d765c1-615f-478e-adea-49eee8b47aae",
+                "creator_id": "eval_after_c4_t3_3",
+                "event": "appeal",
+                "reasoning": "I challenge decision 3 in trial 3. Please review my explanation.",
+                "status": "under_review",
+                "timestamp": "2026-11-05T00:47:45+00:00"
+              },
+              "passed": true
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6516,
+                "content_id": "a9168953-fd3b-4ed6-9c0e-f1e730c766b1",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6825,
+                "status": "decided",
+                "style_score": 0.5794
+              },
+              "sent": {
+                "creator_id": "eval_after_c4_t3_4",
+                "text_preview": "Sustainable transportation can provide several benefits for urban communities. Public tran",
+                "text_length": 440
+              },
+              "reasoning": "I challenge decision 4 in trial 3. Please review my explanation.",
+              "appeal": {
+                "status": 200,
+                "response": {
+                  "content_id": "a9168953-fd3b-4ed6-9c0e-f1e730c766b1",
+                  "message": "Your appeal has been recorded for review.",
+                  "status": "under_review"
+                }
+              },
+              "original_log_entry": {
+                "combined_score": 0.6516,
+                "content_id": "a9168953-fd3b-4ed6-9c0e-f1e730c766b1",
+                "creator_id": "eval_after_c4_t3_4",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.6825,
+                "status": "decided",
+                "style_score": 0.5794,
+                "timestamp": "2026-11-05T00:47:45+00:00"
+              },
+              "appeal_log_entry": {
+                "content_id": "a9168953-fd3b-4ed6-9c0e-f1e730c766b1",
+                "creator_id": "eval_after_c4_t3_4",
+                "event": "appeal",
+                "reasoning": "I challenge decision 4 in trial 3. Please review my explanation.",
+                "status": "under_review",
+                "timestamp": "2026-11-05T00:47:45+00:00"
+              },
+              "passed": true
+            },
+            {
+              "status": 200,
+              "response": {
+                "confidence": 0.6686,
+                "content_id": "fc9072ff-642e-414f-9522-a4b0ea9ad685",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.7325,
+                "status": "decided",
+                "style_score": 0.5196
+              },
+              "sent": {
+                "creator_id": "eval_after_c4_t3_5",
+                "text_preview": "Learning a new skill requires practice and patience. Beginners should start with basic con",
+                "text_length": 437
+              },
+              "reasoning": "I challenge decision 5 in trial 3. Please review my explanation.",
+              "appeal": {
+                "status": 200,
+                "response": {
+                  "content_id": "fc9072ff-642e-414f-9522-a4b0ea9ad685",
+                  "message": "Your appeal has been recorded for review.",
+                  "status": "under_review"
+                }
+              },
+              "original_log_entry": {
+                "combined_score": 0.6686,
+                "content_id": "fc9072ff-642e-414f-9522-a4b0ea9ad685",
+                "creator_id": "eval_after_c4_t3_5",
+                "guess": "unsure",
+                "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+                "model_score": 0.7325,
+                "status": "decided",
+                "style_score": 0.5196,
+                "timestamp": "2026-11-05T00:47:45+00:00"
+              },
+              "appeal_log_entry": {
+                "content_id": "fc9072ff-642e-414f-9522-a4b0ea9ad685",
+                "creator_id": "eval_after_c4_t3_5",
+                "event": "appeal",
+                "reasoning": "I challenge decision 5 in trial 3. Please review my explanation.",
+                "status": "under_review",
+                "timestamp": "2026-11-05T00:47:45+00:00"
+              },
+              "passed": true
+            }
+          ]
+        }
+      ],
+      "verdict": "MET"
+    },
+    {
+      "criterion": 5,
+      "name": "bad input",
+      "kind": "bad_input",
+      "target": "6/6 JSON 400 responses; zero new decisions",
+      "trials": [
+        {
+          "trial": 1,
+          "metrics": {
+            "json_400_responses": 6,
+            "invalid_inputs": 6,
+            "new_decisions": 0
+          },
+          "verdict": "MET",
+          "results": [
+            {
+              "status": 400,
+              "response": {
+                "error": "text must be a nonempty string."
+              },
+              "sent": {
+                "creator_id": "eval_after_c5_t1_1",
+                "text_preview": "(missing)",
+                "text_length": null
+              }
+            },
+            {
+              "status": 400,
+              "response": {
+                "error": "text must be a nonempty string."
+              },
+              "sent": {
+                "creator_id": "eval_after_c5_t1_2",
+                "text_preview": "",
+                "text_length": 0
+              }
+            },
+            {
+              "status": 400,
+              "response": {
+                "error": "text must be a nonempty string."
+              },
+              "sent": {
+                "creator_id": "eval_after_c5_t1_3",
+                "text_preview": "   ",
+                "text_length": 3
+              }
+            },
+            {
+              "status": 400,
+              "response": {
+                "error": "text must be a nonempty string."
+              },
+              "sent": {
+                "creator_id": "eval_after_c5_t1_4",
+                "text_preview": "123",
+                "text_length": null
+              }
+            },
+            {
+              "status": 400,
+              "response": {
+                "error": "text must be at most 10000 characters."
+              },
+              "sent": {
+                "creator_id": "eval_after_c5_t1_5",
+                "text_preview": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+                "text_length": 10001
+              }
+            },
+            {
+              "status": 400,
+              "response": {
+                "error": "creator_id must be a nonempty string."
+              },
+              "sent": {
+                "creator_id": null,
+                "text_preview": "This valid sentence has no creator identifier.",
+                "text_length": 46
+              }
+            }
+          ]
+        },
+        {
+          "trial": 2,
+          "metrics": {
+            "json_400_responses": 6,
+            "invalid_inputs": 6,
+            "new_decisions": 0
+          },
+          "verdict": "MET",
+          "results": [
+            {
+              "status": 400,
+              "response": {
+                "error": "text must be a nonempty string."
+              },
+              "sent": {
+                "creator_id": "eval_after_c5_t2_1",
+                "text_preview": "(missing)",
+                "text_length": null
+              }
+            },
+            {
+              "status": 400,
+              "response": {
+                "error": "text must be a nonempty string."
+              },
+              "sent": {
+                "creator_id": "eval_after_c5_t2_2",
+                "text_preview": "",
+                "text_length": 0
+              }
+            },
+            {
+              "status": 400,
+              "response": {
+                "error": "text must be a nonempty string."
+              },
+              "sent": {
+                "creator_id": "eval_after_c5_t2_3",
+                "text_preview": "   ",
+                "text_length": 3
+              }
+            },
+            {
+              "status": 400,
+              "response": {
+                "error": "text must be a nonempty string."
+              },
+              "sent": {
+                "creator_id": "eval_after_c5_t2_4",
+                "text_preview": "123",
+                "text_length": null
+              }
+            },
+            {
+              "status": 400,
+              "response": {
+                "error": "text must be at most 10000 characters."
+              },
+              "sent": {
+                "creator_id": "eval_after_c5_t2_5",
+                "text_preview": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+                "text_length": 10001
+              }
+            },
+            {
+              "status": 400,
+              "response": {
+                "error": "creator_id must be a nonempty string."
+              },
+              "sent": {
+                "creator_id": null,
+                "text_preview": "This valid sentence has no creator identifier.",
+                "text_length": 46
+              }
+            }
+          ]
+        },
+        {
+          "trial": 3,
+          "metrics": {
+            "json_400_responses": 6,
+            "invalid_inputs": 6,
+            "new_decisions": 0
+          },
+          "verdict": "MET",
+          "results": [
+            {
+              "status": 400,
+              "response": {
+                "error": "text must be a nonempty string."
+              },
+              "sent": {
+                "creator_id": "eval_after_c5_t3_1",
+                "text_preview": "(missing)",
+                "text_length": null
+              }
+            },
+            {
+              "status": 400,
+              "response": {
+                "error": "text must be a nonempty string."
+              },
+              "sent": {
+                "creator_id": "eval_after_c5_t3_2",
+                "text_preview": "",
+                "text_length": 0
+              }
+            },
+            {
+              "status": 400,
+              "response": {
+                "error": "text must be a nonempty string."
+              },
+              "sent": {
+                "creator_id": "eval_after_c5_t3_3",
+                "text_preview": "   ",
+                "text_length": 3
+              }
+            },
+            {
+              "status": 400,
+              "response": {
+                "error": "text must be a nonempty string."
+              },
+              "sent": {
+                "creator_id": "eval_after_c5_t3_4",
+                "text_preview": "123",
+                "text_length": null
+              }
+            },
+            {
+              "status": 400,
+              "response": {
+                "error": "text must be at most 10000 characters."
+              },
+              "sent": {
+                "creator_id": "eval_after_c5_t3_5",
+                "text_preview": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+                "text_length": 10001
+              }
+            },
+            {
+              "status": 400,
+              "response": {
+                "error": "creator_id must be a nonempty string."
+              },
+              "sent": {
+                "creator_id": null,
+                "text_preview": "This valid sentence has no creator identifier.",
+                "text_length": 46
+              }
+            }
+          ]
+        }
+      ],
+      "verdict": "MET"
+    }
+  ]
+}
