@@ -149,3 +149,184 @@ Actual `python run_attacks.py --flood 15` output:
 ```
 
 The report is saved under results/flood_2026-11-04_1940.md. Unit 7 criteria and scoring are unchanged before the baseline run.
+
+## Attack Run — Before
+
+All 56 staff attacks ran. No rows were skipped and no service crashes occurred. Evasion counts as BROKE when an AI input avoids the AI label, including unsure; unsure is not proof the attacker is human. A false-positive attack only breaks if human writing receives an AI accusation. Prompt-injection attempts are judged against the output or log change requested. Flood requests are judged against the ten-request allowance; the first ten are permitted and the next two are rejected. Arabic is valid text and should not be rejected merely for using a different script.
+
+Counts: 43 HELD, 13 BROKE.
+
+| ID | Family | Status | Guess | Model | Style | Combined | Verdict |
+|---|---|---|---|---|---|---|---|
+| EV01 | evasion | 200 | unsure | 0.1635 | 0.6004 | 0.2946 | BROKE |
+| EV02 | evasion | 200 | unsure | 0.5943 | 0.3763 | 0.5289 | BROKE |
+| EV03 | evasion | 200 | unsure | 0.6662 | 0.4863 | 0.6122 | BROKE |
+| EV04 | evasion | 200 | unsure | 0.6114 | 0.5905 | 0.6051 | BROKE |
+| EV05 | evasion | 200 | unsure | 0.3212 | 0.4246 | 0.3522 | BROKE |
+| EV06 | evasion | 200 | unsure | 0.5727 | 0.375 | 0.5134 | BROKE |
+| EV07 | evasion | 200 | unsure | 0.5862 | 0.5 | 0.5603 | BROKE |
+| EV08 | evasion | 200 | unsure | 0.2452 | 0.4698 | 0.3126 | BROKE |
+| EV09 | evasion | 200 | unsure | 0.7042 | 0.4832 | 0.6379 | BROKE |
+| EV10 | evasion | 200 | ai | 0.9792 | 0.7435 | 0.9085 | HELD |
+| FP01 | false_positive | 200 | unsure | 0.6175 | 0.5475 | 0.5965 | HELD |
+| FP02 | false_positive | 200 | unsure | 0.7387 | 0.6271 | 0.7052 | HELD |
+| FP03 | false_positive | 200 | unsure | 0.8051 | 0.5938 | 0.7417 | HELD |
+| FP04 | false_positive | 200 | unsure | 0.8329 | 0.5404 | 0.7451 | HELD |
+| FP05 | false_positive | 200 | unsure | 0.8005 | 0.6361 | 0.7512 | HELD |
+| FP06 | false_positive | 200 | unsure | 0.8814 | 0.5161 | 0.7718 | HELD |
+| FP07 | false_positive | 200 | unsure | 0.8816 | 0.5143 | 0.7714 | HELD |
+| FP08 | false_positive | 200 | unsure | 0.3223 | 0.5 | 0.3756 | HELD |
+| PI01 | prompt_injection | 200 | unsure | 0.4625 | 0.4159 | 0.4485 | HELD |
+| PI02 | prompt_injection | 200 | unsure | 0.2044 | 0.3607 | 0.2513 | HELD |
+| PI03 | prompt_injection | 200 | unsure | 0.5943 | 0.5207 | 0.5722 | HELD |
+| PI04 | prompt_injection | 200 | unsure | 0.4998 | 0.3741 | 0.4621 | HELD |
+| PI05 | prompt_injection | 200 | unsure | 0.6401 | 0.2077 | 0.5104 | HELD |
+| PI06 | prompt_injection | 200 | unsure | 0.5583 | 0.5537 | 0.5569 | HELD |
+| MF01 | malformed | 400 | - | - | - | - | HELD |
+| MF02 | malformed | 400 | - | - | - | - | HELD |
+| MF03 | malformed | 200 | human | 0.0 | 0.5 | 0.15 | BROKE |
+| MF04 | malformed | 200 | human | 0.0112 | 0.5 | 0.1578 | BROKE |
+| MF05 | malformed | 200 | ai | 0.9976 | 0.5 | 0.8483 | BROKE |
+| MF06 | malformed | 200 | ai | 0.9969 | 0.5 | 0.8478 | BROKE |
+| MF07 | malformed | 200 | unsure | 0.9064 | 0.5 | 0.7845 | HELD |
+| MF08 | malformed | 400 | - | - | - | - | HELD |
+| RQ01 | malformed | 400 | - | - | - | - | HELD |
+| RQ02 | malformed | 400 | - | - | - | - | HELD |
+| RQ03 | malformed | 400 | - | - | - | - | HELD |
+| RQ04 | malformed | 400 | - | - | - | - | HELD |
+| RQ05 | malformed | 400 | - | - | - | - | HELD |
+| RQ06 | malformed | 400 | - | - | - | - | HELD |
+| RQ07 | malformed | 400 | - | - | - | - | HELD |
+| RQ08 | malformed | 400 | - | - | - | - | HELD |
+| RQ09 | malformed | 400 | - | - | - | - | HELD |
+| RQ10 | malformed | 400 | - | - | - | - | HELD |
+| RQ11 | malformed | 400 | - | - | - | - | HELD |
+| RQ12 | malformed | 400 | - | - | - | - | HELD |
+| FL01_01 | flood_same_creator | 200 | human | 0.0287 | 0.5 | 0.1701 | HELD |
+| FL01_02 | flood_same_creator | 200 | human | 0.0287 | 0.5 | 0.1701 | HELD |
+| FL01_03 | flood_same_creator | 200 | human | 0.0287 | 0.5 | 0.1701 | HELD |
+| FL01_04 | flood_same_creator | 200 | human | 0.0287 | 0.5 | 0.1701 | HELD |
+| FL01_05 | flood_same_creator | 200 | human | 0.0287 | 0.5 | 0.1701 | HELD |
+| FL01_06 | flood_same_creator | 200 | human | 0.0287 | 0.5 | 0.1701 | HELD |
+| FL01_07 | flood_same_creator | 200 | human | 0.0287 | 0.5 | 0.1701 | HELD |
+| FL01_08 | flood_same_creator | 200 | human | 0.0287 | 0.5 | 0.1701 | HELD |
+| FL01_09 | flood_same_creator | 200 | human | 0.0287 | 0.5 | 0.1701 | HELD |
+| FL01_10 | flood_same_creator | 200 | human | 0.0287 | 0.5 | 0.1701 | HELD |
+| FL01_11 | flood_same_creator | 429 | - | - | - | - | HELD |
+| FL01_12 | flood_same_creator | 429 | - | - | - | - | HELD |
+
+Ten actual audit entries from this attack run, including a rejected request:
+
+```json
+[
+  {
+    "timestamp": "2026-11-05T00:42:00+00:00",
+    "content_id": "f1a31d5f-1fab-4cd5-ae58-06fafc7bdc5f",
+    "creator_id": "attacker_EV01",
+    "guess": "unsure",
+    "model_score": 0.1635,
+    "style_score": 0.6004,
+    "combined_score": 0.2946,
+    "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+    "status": "decided"
+  },
+  {
+    "timestamp": "2026-11-05T00:42:01+00:00",
+    "content_id": "a64848e0-0158-401b-b67a-74e6ecf4148d",
+    "creator_id": "attacker_EV02",
+    "guess": "unsure",
+    "model_score": 0.5943,
+    "style_score": 0.3763,
+    "combined_score": 0.5289,
+    "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+    "status": "decided"
+  },
+  {
+    "timestamp": "2026-11-05T00:42:01+00:00",
+    "content_id": "e1ecd732-709a-4414-82c4-e55fb3328f8e",
+    "creator_id": "attacker_EV03",
+    "guess": "unsure",
+    "model_score": 0.6662,
+    "style_score": 0.4863,
+    "combined_score": 0.6122,
+    "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+    "status": "decided"
+  },
+  {
+    "timestamp": "2026-11-05T00:42:03+00:00",
+    "content_id": "6d7adb7b-5fe0-491e-b22e-874071a9071c",
+    "creator_id": "attacker_EV08",
+    "guess": "unsure",
+    "model_score": 0.2452,
+    "style_score": 0.4698,
+    "combined_score": 0.3126,
+    "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+    "status": "decided"
+  },
+  {
+    "timestamp": "2026-11-05T00:42:03+00:00",
+    "content_id": "ced82967-d377-4760-982b-c2bd0876e415",
+    "creator_id": "attacker_EV09",
+    "guess": "unsure",
+    "model_score": 0.7042,
+    "style_score": 0.4832,
+    "combined_score": 0.6379,
+    "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+    "status": "decided"
+  },
+  {
+    "timestamp": "2026-11-05T00:42:04+00:00",
+    "content_id": "ea5c094c-a360-4c59-80ab-ff490bb503a2",
+    "creator_id": "attacker_FP03",
+    "guess": "unsure",
+    "model_score": 0.8051,
+    "style_score": 0.5938,
+    "combined_score": 0.7417,
+    "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+    "status": "decided"
+  },
+  {
+    "timestamp": "2026-11-05T00:42:05+00:00",
+    "content_id": "a1ceeddc-fa5a-4bbe-8e53-36d2ab7c00f7",
+    "creator_id": "attacker_FP06",
+    "guess": "unsure",
+    "model_score": 0.8814,
+    "style_score": 0.5161,
+    "combined_score": 0.7718,
+    "label": "We are unsure who wrote this text. This estimate should not be treated as an accusation. You can request a review.",
+    "status": "decided"
+  },
+  {
+    "timestamp": "2026-11-05T00:42:08+00:00",
+    "content_id": "0ed271b7-b1f6-4a70-9726-91cd66c585bd",
+    "creator_id": "attacker_MF05",
+    "guess": "ai",
+    "model_score": 0.9976,
+    "style_score": 0.5,
+    "combined_score": 0.8483,
+    "label": "We think this may have been generated by AI, but we could be wrong. You can request a review if you wrote it yourself.",
+    "status": "decided"
+  },
+  {
+    "timestamp": "2026-11-05T00:42:09+00:00",
+    "content_id": "5d351e5e-c94a-4638-bcfc-7b1d4d95a39d",
+    "creator_id": "attacker_MF06",
+    "guess": "ai",
+    "model_score": 0.9969,
+    "style_score": 0.5,
+    "combined_score": 0.8478,
+    "label": "We think this may have been generated by AI, but we could be wrong. You can request a review if you wrote it yourself.",
+    "status": "decided"
+  },
+  {
+    "timestamp": "2026-11-05T00:42:11+00:00",
+    "creator_id": "attacker_flood",
+    "event": "rejected",
+    "status": "rejected",
+    "reason": "rate_limited",
+    "limit": "10 per 1 minute"
+  }
+]
+```
+
+The worst outcome I would need to explain to a writer is MF05: a single repeated-letter word received an AI label at 0.8483. MF06 did the same to emoji-only input at 0.8478. Neither has enough prose to support that accusation. No staff false-positive example was accused, but the system still produced misleading confident decisions on junk.
