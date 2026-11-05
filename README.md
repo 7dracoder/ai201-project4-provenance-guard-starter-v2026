@@ -135,3 +135,17 @@ I directed Codex through the assignment requirements to make the work faster, an
 2. When Codex asked me to supply my acceptance criteria, I asked it to draft them in simple language. It produced five measurable targets with reasons, and committed them before collecting results. The criteria were AI-drafted, even though the assignment asks students to write their own. The targets have not been changed to match the sample results.
 
 Setup details: [RUNNING.md](RUNNING.md). Fork: https://github.com/7dracoder/ai201-project4-provenance-guard-starter-v2026
+
+## Rate Limiting
+
+The limits are 10 submissions per minute and 200 per day, enabled by default on POST /submit. Ten per minute allows a writer to submit a few revisions while stopping a rapid probe after ten requests; 200 per day permits a busy writing session but caps sustained probing. The starter counts a supplied creator_id and falls back to the caller address when it is missing or unusable; this existing behavior is unchanged. A caller can evade it by changing creator_id, and people sharing an address can affect one another when no ID is supplied. Counts are in memory and reset when the service restarts.
+
+Every decision already records timestamp, content_id, creator_id, guess, model_score, style_score, combined_score, label, and status. This unit also records route rejections, as well as the starter's rate-limit rejections. The original append-only decision remains beside any appeal; the newest event gives the current status.
+
+Actual `python run_attacks.py --flood 15` output:
+
+```
+200 200 200 200 200 200 200 200 200 200 429 429 429 429 429
+```
+
+The report is saved under results/flood_2026-11-04_1940.md. Unit 7 criteria and scoring are unchanged before the baseline run.

@@ -151,7 +151,7 @@ def health():
 # ── YOU BUILD THIS ────────────────────────────────────────────────────────────
 
 @app.post("/submit")
-# @limiter.limit(f"{config.RATE_LIMIT_PER_MINUTE}/minute;{config.RATE_LIMIT_PER_DAY}/day")
+@limiter.limit(f"{config.RATE_LIMIT_PER_MINUTE}/minute;{config.RATE_LIMIT_PER_DAY}/day")
 def submit():
     """Validate a submission, run both signals, and log the labeled decision."""
     import detector
@@ -159,23 +159,29 @@ def submit():
     import stylometry
 
     payload = request.get_json(silent=True)
+
+    def reject(message, status=400):
+        creator = payload.get("creator_id", "unknown") if isinstance(payload, dict) else "unknown"
+        audit.log_rejection(creator_id=creator, reason=message, http_status=status)
+        return jsonify({"error": message}), status
+
     if not isinstance(payload, dict):
-        return jsonify({"error": "Send a JSON object."}), 400
+        return reject("Send a JSON object.")
     text = payload.get("text")
     creator_id = payload.get("creator_id")
     if not isinstance(text, str) or not text.strip():
-        return jsonify({"error": "text must be a nonempty string."}), 400
+        return reject("text must be a nonempty string.")
     if len(text) > config.MAX_TEXT_LENGTH:
-        return jsonify({"error": "text must be at most 10000 characters."}), 400
+        return reject("text must be at most 10000 characters.")
     if not isinstance(creator_id, str) or not creator_id.strip():
-        return jsonify({"error": "creator_id must be a nonempty string."}), 400
+        return reject("creator_id must be a nonempty string.")
 
     try:
         model_score = detector.model_signal(text)
     except ValueError as exc:
-        return jsonify({"error": str(exc)}), 400
+        return reject(str(exc))
     except detector.DetectorUnavailable:
-        return jsonify({"error": "Detector unavailable. Run python detector.py to download the model."}), 503
+        return reject("Detector unavailable. Run python detector.py to download the model.", 503)
     style_score = stylometry.style_signal(text)
     confidence = scoring.combine_signals(model_score, style_score)
     guess, label = scoring.score_to_label(confidence)
